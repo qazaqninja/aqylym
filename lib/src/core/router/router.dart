@@ -1,7 +1,7 @@
+import 'package:aqylym/src/features/onboarding/presentation/onboarding_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../features/login/presentation/login_page.dart';
 import '../services/storage/storage_service_impl.dart';
 
 // part 'route_list.dart';
@@ -32,7 +32,7 @@ GoRouter routerProvider() {
         path: RoutePaths.login,
         pageBuilder: (context, state) {
           return getPage(
-            child: const LoginPage(),
+            child: const OnboardingPage(),
             state: state,
           );
         },

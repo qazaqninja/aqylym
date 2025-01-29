@@ -145,6 +145,9 @@ flutter:
     - assets/splash/
     - assets/images/
     - assets/images/intro1.jpg
+    - assets/images/intro2.jpg
+    - assets/images/intro3.jpg
+    - assets/images/intro4.jpg
   fonts:
     - family: SF UI Display
       fonts:
