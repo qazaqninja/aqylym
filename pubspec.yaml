@@ -5,7 +5,7 @@ publish_to: "none"
 version: 0.0.1+1
 
 environment:
-  sdk: ^3.6.1
+  sdk: ">=3.5.3 <4.0.0"
 
 # * Application Packages and Libraries
 # * Flutter Packages overrides for conflict resolution
@@ -23,6 +23,7 @@ dependencies:
   connectivity_plus: ^6.1.1
   cupertino_icons: ^1.0.2
   cupertino_modal_sheet: null
+  device_info_plus: ^11.2.0
   dio: ^5.1.1
   drift: ^2.5.0
   dropdown_button2: ^2.3.9
@@ -33,13 +34,14 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
+  flutter_chat_core: ^0.0.4
   flutter_chat_types: ^3.6.2
   flutter_chat_ui: ^1.6.15
-  flutter_chat_core: ^0.0.4
   flutter_dotenv: ^5.0.2
   flutter_flavorizr: ^2.1.5
   flutter_gen: ^5.1.0+1
   flutter_launcher_icons: ^0.13.0
+  flutter_local_notifications: ^18.0.1
   flutter_localizations:
     sdk: flutter
   flutter_map: ^3.1.0
@@ -90,13 +92,11 @@ dependencies:
   sentry_flutter: ^8.9.0
   shared_preferences: ^2.3.3
   shimmer: ^3.0.0
-  device_info_plus: ^11.2.0
   showcaseview: ^2.0.0+1
   skeletonizer: ^1.4.2
   skeletons: ^0.0.3
   smooth_page_indicator: ^1.2.0+3
   speech_to_text: ^7.0.0
-  # spinify: ^0.1.0
   stack_trace: ^1.11.1
   table_calendar: ^3.0.9
   transformable_list_view: ^0.6.0
@@ -105,7 +105,6 @@ dependencies:
   uuid: ^4.5.1
   web_socket_channel: ^2.4.0
   ws: ^1.0.0
-  flutter_local_notifications: ^18.0.1
 
 # * Packages that will not be in the release version of app
 dev_dependencies:
@@ -145,21 +144,14 @@ flutter:
     - assets/icons/
     - assets/splash/
     - assets/images/
-
-  # fonts:
-  #   - family: app_icons
-  #     fonts:
-  #       - asset: assets/fonts/app_icons.ttf
-
-  #   - family: Inter
-  #     fonts:
-  #       - asset: assets/fonts/Inter-Bold.ttf
-  #         weight: 700
-  #       - asset: assets/fonts/Inter-Medium.ttf
-  #         weight: 500
-  #       - asset: assets/fonts/Inter-Regular.ttf
-  #         weight: 400
-
+    - assets/images/intro1.jpg
+  fonts:
+    - family: SF UI Display
+      fonts:
+        - asset: assets/fonts/sfuidisplay_bold.ttf
+          weight: 700
+        - asset: assets/fonts/sfuidisplay_heavy.ttf
+          weight: 500
 # * Localizations generating config
 flutter_intl:
   enabled: true
