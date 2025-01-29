@@ -82,7 +82,7 @@ final textTheme = TextTheme(
   ),
 );
 
-class TextStyles {
+class FigmaTextstyle {
   static const medium24px =
       TextStyle(fontWeight: FontWeight.w500, fontFamily: "SFUIDisplay", fontStyle: FontStyle.normal, fontSize: 24.0);
   static const regular24px =
