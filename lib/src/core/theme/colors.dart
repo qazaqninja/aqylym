@@ -13,5 +13,6 @@ class AppColors {
   static const pink = Color(0xffb51260);
   static const backgroundTagdm = Color(0xfff4f4f4);
   static const greyGame = Color(0xfff4f4f4);
-  static const darkGrey = Color(0xff3e3e3e); // Added missing name
+  static const darkGrey = Color(0xff3e3e3e);
+  static const backgroundOfName = Color(0xffE8F0FB);
 }
