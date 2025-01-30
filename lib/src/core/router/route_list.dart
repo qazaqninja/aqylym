@@ -1,93 +1,85 @@
-// part of 'router.dart';
+part of 'router.dart';
 
-// final st = StorageServiceImpl();
+final st = StorageServiceImpl();
 
-// int getCUrrentAcademicYear() {
-//   final today = DateTime.now();
-//   return today.month <= 6 ? today.year - 1 : today.year;
-// }
+int getCUrrentAcademicYear() {
+  final today = DateTime.now();
+  return today.month <= 6 ? today.year - 1 : today.year;
+}
 
-// Page getPage({
-//   required Widget child,
-//   required GoRouterState state,
-// }) {
-//   return MaterialPage(
-//     maintainState: false,
-//     key: state.pageKey,
-//     child: child,
-//   );
-// }
+Page getPage({
+  required Widget child,
+  required GoRouterState state,
+}) {
+  return MaterialPage(
+    maintainState: false,
+    key: state.pageKey,
+    child: child,
+  );
+}
 
-// List<RouteBase> _routes = [
-//   StatefulShellRoute.indexedStack(
-//     builder: (context, state, navigationShell) {
-//       return BottomNavigationPage(child: navigationShell);
-//     },
-//     branches: [
-//       // First Tab - Role-specific content
-//       StatefulShellBranch(
-//         routes: [
-//           GoRoute(
-//             path: '/',
-//             redirect: (context, state) => '/insights',
-//           ),
-//           GoRoute(
-//             path: '/insights',
-//             pageBuilder: (context, state) {
-//               // Role-specific page routing
-//               switch (roleNotifier.currentRole) {
-//                 case 'teacher':
-//                   return getPage(child: TeacherInsightPage(), state: state);
-//                 case 'classroomTeacher':
-//                   return getPage(child: const ClassTeacherInsightPage(), state: state);
-//                 case 'parent':
-//                   return getPage(child: const InsightsPage(), state: state);
-//                 default:
-//                   return getPage(child: const InsightsPage(), state: state);
-//               }
-//             },
-//           ),
-//           // Add additional role-specific routes here if needed
-//           GoRoute(
-//             path: '/teacher-insight',
-//             pageBuilder: (context, state) => getPage(
-//               child: TeacherInsightPage(),
-//               state: state,
-//             ),
-//           ),
-//           GoRoute(
-//             path: '/classroom-teacher-insight',
-//             pageBuilder: (context, state) => getPage(
-//               child: const ClassTeacherInsightPage(),
-//               state: state,
-//             ),
-//           ),
-//         ],
-//       ),
-//       // Second Tab - News (Common for all roles)
-//       StatefulShellBranch(
-//         routes: [
-//           GoRoute(
-//             path: RoutePaths.news,
-//             pageBuilder: (context, state) => getPage(
-//               child: const NewsPage(),
-//               state: state,
-//             ),
-//           ),
-//         ],
-//       ),
-//       // Third Tab - Chats (Common for all roles)
-//       StatefulShellBranch(
-//         routes: [
-//           GoRoute(
-//             path: RoutePaths.chats,
-//             pageBuilder: (context, state) => getPage(
-//               child: const ChatPage(),
-//               state: state,
-//             ),
-//           ),
-//         ],
-//       ),
-//     ],
-//   ),
-// ];
+List<RouteBase> _routes = [
+  StatefulShellRoute.indexedStack(
+    builder: (context, state, navigationShell) {
+      return BottomNavigationPage(child: navigationShell);
+    },
+    branches: [
+      StatefulShellBranch(
+        routes: [
+          GoRoute(
+            path: RoutePaths.main,
+            pageBuilder: (context, state) => getPage(
+              child: const MainPage(),
+              state: state,
+            ),
+          ),
+        ],
+      ),
+      StatefulShellBranch(
+        routes: [
+          GoRoute(
+            path: RoutePaths.books,
+            pageBuilder: (context, state) => getPage(
+              child: const BooksPage(),
+              state: state,
+            ),
+          ),
+        ],
+      ),
+      // Second Tab - Games
+      StatefulShellBranch(
+        routes: [
+          GoRoute(
+            path: RoutePaths.games,
+            pageBuilder: (context, state) => getPage(
+              child: const GamesPage(),
+              state: state,
+            ),
+          ),
+        ],
+      ),
+      StatefulShellBranch(
+        routes: [
+          GoRoute(
+            path: RoutePaths.profile,
+            pageBuilder: (context, state) => getPage(
+              child: const ProfilePage(),
+              state: state,
+            ),
+          ),
+        ],
+      ),
+      StatefulShellBranch(
+        routes: [
+          GoRoute(
+            path: RoutePaths.help,
+            pageBuilder: (context, state) => getPage(
+              child: const HelpPage(),
+              state: state,
+            ),
+          ),
+        ],
+      ),
+    ],
+  ),
+];
