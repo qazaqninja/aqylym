@@ -140,6 +140,7 @@ flutter:
   uses-material-design: true
   generate: true
 
+  
   assets:
     - assets/icons/
     - assets/splash/
@@ -148,7 +149,12 @@ flutter:
     - assets/images/intro2.jpg
     - assets/images/intro3.jpg
     - assets/images/intro4.jpg
+
   fonts:
+    - family: app_icons
+      fonts:
+        - asset: assets/icons/app_icons.ttf
+
     - family: SF UI Display
       fonts:
         - asset: assets/fonts/sfuidisplay_bold.ttf
