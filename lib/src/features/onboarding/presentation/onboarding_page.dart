@@ -104,7 +104,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     const SizedBox(height: 23),
                     Container(
                       width: double.infinity,
-                      height: 56,
+                      padding: const EdgeInsets.symmetric(vertical: 12),
                       decoration: BoxDecoration(
                         color: AppColors.mint,
                         borderRadius: BorderRadius.circular(30),
