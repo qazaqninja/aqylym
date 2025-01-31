@@ -66,6 +66,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
       body: SafeArea(
         top: false,
         child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
