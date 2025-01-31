@@ -2,11 +2,6 @@ part of 'router.dart';
 
 final st = StorageServiceImpl();
 
-int getCUrrentAcademicYear() {
-  final today = DateTime.now();
-  return today.month <= 6 ? today.year - 1 : today.year;
-}
-
 Page getPage({
   required Widget child,
   required GoRouterState state,
@@ -81,5 +76,19 @@ List<RouteBase> _routes = [
         ],
       ),
     ],
+  ),
+  GoRoute(
+    path: RoutePaths.test,
+    pageBuilder: (context, state) => getPage(
+      child: const DiagnosticTestPage(),
+      state: state,
+    ),
+  ),
+  GoRoute(
+    path: RoutePaths.testQuestion,
+    pageBuilder: (context, state) => getPage(
+      child: const DiagnosticTestPageQuestions(),
+      state: state,
+    ),
   ),
 ];

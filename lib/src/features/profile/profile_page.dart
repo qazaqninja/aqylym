@@ -1,10 +1,11 @@
+import 'package:aqylym/src/app/imports.dart';
+import 'package:aqylym/src/core/router/router.dart';
 import 'package:aqylym/src/core/theme/app_icons.dart';
 import 'package:aqylym/src/core/theme/colors.dart';
 import 'package:aqylym/src/core/utils/constants/profile_constants.dart';
 import 'package:aqylym/src/features/profile/widgets/custom_switch.dart';
 import 'package:aqylym/src/features/profile/widgets/profile_header.dart';
 import 'package:aqylym/src/features/profile/widgets/profile_section_widget.dart';
-import 'package:flutter/material.dart';
 
 class ProfileSection {
   final String title;
@@ -47,7 +48,9 @@ class _ProfilePageState extends State<ProfilePage> {
             ProfileItem(
               title: 'Пройти диагностический тест',
               trailing: const Icon(AppIcons.chevron_right, color: AppColors.blackFont, size: 20),
-              onTap: () {},
+              onTap: () {
+                context.push(RoutePaths.test);
+              },
             ),
             ProfileItem(
               title: 'Добавить отслеживателя',

@@ -7,4 +7,6 @@ class RoutePaths {
   static const String profile = '/profile';
   static const String main = '/main';
   static const String initial = '/';
+  static const String test = '/test';
+  static const String testQuestion = '/est-questions';
 }

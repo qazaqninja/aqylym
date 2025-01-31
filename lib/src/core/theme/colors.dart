@@ -18,4 +18,5 @@ class AppColors {
   static const containerColor = Color(0xffF2F2F2);
   static const dividerColor = Color(0xffE6E6E6);
   static const switchColor = Color(0xff8D8D8D);
+  static const questionColor = Color(0xff3E3E3E);
 }

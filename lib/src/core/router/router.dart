@@ -4,6 +4,8 @@ import 'package:aqylym/src/features/games/games_page.dart';
 import 'package:aqylym/src/features/help/help_page.dart';
 import 'package:aqylym/src/features/main/main_page.dart';
 import 'package:aqylym/src/features/profile/profile_page.dart';
+import 'package:aqylym/src/features/test/diagnostic_test_page.dart';
+import 'package:aqylym/src/features/test/diagnostic_test_page_questions.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
