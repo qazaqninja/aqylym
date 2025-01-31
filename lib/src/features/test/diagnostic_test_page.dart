@@ -126,3 +126,43 @@ class CustomButton extends StatelessWidget {
     );
   }
 }
+
+class CustomLoginButton extends StatelessWidget {
+  final String data;
+  final VoidCallback onTap;
+  const CustomLoginButton({
+    required this.onTap,
+    super.key,
+    required this.data,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      splashColor: Colors.transparent,
+      highlightColor: Colors.transparent,
+      child: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: AppColors.mint,
+          borderRadius: BorderRadius.circular(
+            10,
+          ),
+        ),
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 25),
+        child: Center(
+          child: Text(
+            data,
+            style: const TextStyle(
+              fontFamily: 'SFUIDisplay',
+              fontWeight: FontWeight.w400,
+              fontSize: 18,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
