@@ -1,0 +1,161 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/yerassyltynymbay/aqylym/build/ios/Debug-prod-iphonesimulator/flutter_sound_core/flutter_sound_core.framework/flutter_sound_core'
+relocations:
+  - { offset: 0x33, size: 0x8, addend: 0x0, symName: _flutter_sound_coreVersionString, symObjAddr: 0x0, symBinAddr: 0x6730, symSize: 0x0 }
+  - { offset: 0x67, size: 0x8, addend: 0x0, symName: _flutter_sound_coreVersionNumber, symObjAddr: 0x30, symBinAddr: 0x6760, symSize: 0x0 }
+  - { offset: 0xB0, size: 0x8, addend: 0x0, symName: _theFlautoEngine, symObjAddr: 0x1798, symBinAddr: 0xC040, symSize: 0x0 }
+  - { offset: 0x441, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer init:]', symObjAddr: 0x0, symBinAddr: 0x116F, symSize: 0xA8 }
+  - { offset: 0x825, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer init:]', symObjAddr: 0x0, symBinAddr: 0x116F, symSize: 0xA8 }
+  - { offset: 0x8A9, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer getPlayerState]', symObjAddr: 0xA8, symBinAddr: 0x1217, symSize: 0x1F }
+  - { offset: 0x8E8, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer isDecoderSupported:]', symObjAddr: 0xC7, symBinAddr: 0x1236, symSize: 0x12 }
+  - { offset: 0x925, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer releaseFlautoPlayer]', symObjAddr: 0xD9, symBinAddr: 0x1248, symSize: 0x51 }
+  - { offset: 0x98B, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer stop]', symObjAddr: 0x12A, symBinAddr: 0x1299, symSize: 0x82 }
+  - { offset: 0xA26, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer stopPlayer]', symObjAddr: 0x1AC, symBinAddr: 0x131B, symSize: 0x64 }
+  - { offset: 0xA9D, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer startPlayerFromMicSampleRate:nbChannels:bufferSize:enableVoiceProcessing:]', symObjAddr: 0x210, symBinAddr: 0x137F, symSize: 0x104 }
+  - { offset: 0xBE1, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer getpath:]', symObjAddr: 0x314, symBinAddr: 0x1483, symSize: 0x12F }
+  - { offset: 0xD30, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer getUrl:]', symObjAddr: 0x443, symBinAddr: 0x15B2, symSize: 0x146 }
+  - { offset: 0xE63, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer startPlayerCodec:fromURI:fromDataBuffer:channels:sampleRate:bufferSize:]', symObjAddr: 0x589, symBinAddr: 0x16F8, symSize: 0x519 }
+  - { offset: 0x1355, size: 0x8, addend: 0x0, symName: '___87-[FlautoPlayer startPlayerCodec:fromURI:fromDataBuffer:channels:sampleRate:bufferSize:]_block_invoke', symObjAddr: 0xAA2, symBinAddr: 0x1C11, symSize: 0x9B }
+  - { offset: 0x1440, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer play]', symObjAddr: 0xB5B, symBinAddr: 0x1CAC, symSize: 0x96 }
+  - { offset: 0x14C8, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer needSomeFood:]', symObjAddr: 0xBF1, symBinAddr: 0x1D42, symSize: 0x4E }
+  - { offset: 0x15AE, size: 0x8, addend: 0x0, symName: '___29-[FlautoPlayer needSomeFood:]_block_invoke', symObjAddr: 0xC3F, symBinAddr: 0x1D90, symSize: 0x20 }
+  - { offset: 0x1608, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer audioPlayerDidFinishPlaying:]', symObjAddr: 0xC5F, symBinAddr: 0x1DB0, symSize: 0x4E }
+  - { offset: 0x165D, size: 0x8, addend: 0x0, symName: '___44-[FlautoPlayer audioPlayerDidFinishPlaying:]_block_invoke', symObjAddr: 0xCAD, symBinAddr: 0x1DFE, symSize: 0x21 }
+  - { offset: 0x16B7, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer nothingMoreToPlay]', symObjAddr: 0xCCE, symBinAddr: 0x1E1F, symSize: 0x6 }
+  - { offset: 0x16E4, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer updateProgress:]', symObjAddr: 0xCD4, symBinAddr: 0x1E25, symSize: 0x53 }
+  - { offset: 0x1762, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer startTimer]', symObjAddr: 0xD27, symBinAddr: 0x1E78, symSize: 0xA3 }
+  - { offset: 0x17EA, size: 0x8, addend: 0x0, symName: '___26-[FlautoPlayer startTimer]_block_invoke', symObjAddr: 0xDCA, symBinAddr: 0x1F1B, symSize: 0x56 }
+  - { offset: 0x183F, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer stopTimer]', symObjAddr: 0xE20, symBinAddr: 0x1F71, symSize: 0x60 }
+  - { offset: 0x18AA, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer pausePlayer]', symObjAddr: 0xE80, symBinAddr: 0x1FD1, symSize: 0xBE }
+  - { offset: 0x196C, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer resumePlayer]', symObjAddr: 0xF3E, symBinAddr: 0x208F, symSize: 0x76 }
+  - { offset: 0x1A0D, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer feed:]', symObjAddr: 0xFB4, symBinAddr: 0x2105, symSize: 0x6C }
+  - { offset: 0x1AB2, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer seekToPlayer:]', symObjAddr: 0x1020, symBinAddr: 0x2171, symSize: 0x80 }
+  - { offset: 0x1B39, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer setVolume:fadeDuration:]', symObjAddr: 0x10A0, symBinAddr: 0x21F1, symSize: 0x70 }
+  - { offset: 0x1BC2, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer setPan:]', symObjAddr: 0x1110, symBinAddr: 0x2261, symSize: 0x66 }
+  - { offset: 0x1C32, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer setSpeed:]', symObjAddr: 0x1176, symBinAddr: 0x22C7, symSize: 0x66 }
+  - { offset: 0x1CA2, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer getPosition]', symObjAddr: 0x11DC, symBinAddr: 0x232D, symSize: 0x16 }
+  - { offset: 0x1CE2, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer getDuration]', symObjAddr: 0x11F2, symBinAddr: 0x2343, symSize: 0x16 }
+  - { offset: 0x1D22, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer getProgress]', symObjAddr: 0x1208, symBinAddr: 0x2359, symSize: 0x1B7 }
+  - { offset: 0x1E6C, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer setSubscriptionDuration:]', symObjAddr: 0x13BF, symBinAddr: 0x2510, symSize: 0x6E }
+  - { offset: 0x1EE3, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer GetDirectoryOfType_FlutterSound:]', symObjAddr: 0x142D, symBinAddr: 0x257E, symSize: 0xAA }
+  - { offset: 0x1FE7, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer audioPlayerDidFinishPlaying:successfully:]', symObjAddr: 0x14D7, symBinAddr: 0x2628, symSize: 0x8B }
+  - { offset: 0x2075, size: 0x8, addend: 0x0, symName: '___57-[FlautoPlayer audioPlayerDidFinishPlaying:successfully:]_block_invoke', symObjAddr: 0x1562, symBinAddr: 0x26B3, symSize: 0x60 }
+  - { offset: 0x20E2, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer getStatus]', symObjAddr: 0x15C2, symBinAddr: 0x2713, symSize: 0x1F }
+  - { offset: 0x2122, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer getPlayerStatus]', symObjAddr: 0x15E1, symBinAddr: 0x2732, symSize: 0x34 }
+  - { offset: 0x2175, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer logDebug:]', symObjAddr: 0x1615, symBinAddr: 0x2766, symSize: 0x1E }
+  - { offset: 0x21D0, size: 0x8, addend: 0x0, symName: '-[FlautoPlayer .cxx_destruct]', symObjAddr: 0x1633, symBinAddr: 0x2784, symSize: 0x33 }
+  - { offset: 0x44D6, size: 0x8, addend: 0x0, symName: '-[AudioEngine feed:]', symObjAddr: 0xCFB, symBinAddr: 0x34BB, symSize: 0x356 }
+  - { offset: 0x4501, size: 0x8, addend: 0x0, symName: '__ZZ20-[AudioEngine feed:]E7hasData', symObjAddr: 0x12D14, symBinAddr: 0xC0CC, symSize: 0x0 }
+  - { offset: 0x47F5, size: 0x8, addend: 0x0, symName: __ZL5ready, symObjAddr: 0x12D10, symBinAddr: 0xC0C8, symSize: 0x0 }
+  - { offset: 0x5D25, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto getAudioPlayer]', symObjAddr: 0x0, symBinAddr: 0x27C0, symSize: 0xE }
+  - { offset: 0x5D59, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto setAudioPlayer:]', symObjAddr: 0xE, symBinAddr: 0x27CE, symSize: 0x11 }
+  - { offset: 0x5D98, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto init:]', symObjAddr: 0x1F, symBinAddr: 0x27DF, symSize: 0x73 }
+  - { offset: 0x5E11, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto startPlayerFromBuffer:]', symObjAddr: 0x92, symBinAddr: 0x2852, symSize: 0x12D }
+  - { offset: 0x5F6B, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto startPlayerFromURL:codec:channels:sampleRate:bufferSize:]', symObjAddr: 0x1BF, symBinAddr: 0x297F, symSize: 0xCD }
+  - { offset: 0x6082, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto getDuration]', symObjAddr: 0x28C, symBinAddr: 0x2A4C, symSize: 0x71 }
+  - { offset: 0x60FF, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto getPosition]', symObjAddr: 0x2FD, symBinAddr: 0x2ABD, symSize: 0x71 }
+  - { offset: 0x617C, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto stop]', symObjAddr: 0x36E, symBinAddr: 0x2B2E, symSize: 0x6F }
+  - { offset: 0x61F7, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto play]', symObjAddr: 0x3DD, symBinAddr: 0x2B9D, symSize: 0x58 }
+  - { offset: 0x6274, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto resume]', symObjAddr: 0x435, symBinAddr: 0x2BF5, symSize: 0x58 }
+  - { offset: 0x62F1, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto pause]', symObjAddr: 0x48D, symBinAddr: 0x2C4D, symSize: 0x54 }
+  - { offset: 0x635F, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto setVolume:fadeDuration:]', symObjAddr: 0x4E1, symBinAddr: 0x2CA1, symSize: 0x92 }
+  - { offset: 0x6404, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto setPan:]', symObjAddr: 0x573, symBinAddr: 0x2D33, symSize: 0x6A }
+  - { offset: 0x648A, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto setSpeed:]', symObjAddr: 0x5DD, symBinAddr: 0x2D9D, symSize: 0xB2 }
+  - { offset: 0x653E, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto seek:]', symObjAddr: 0x68F, symBinAddr: 0x2E4F, symSize: 0x6E }
+  - { offset: 0x65C4, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto getStatus]', symObjAddr: 0x6FD, symBinAddr: 0x2EBD, symSize: 0x98 }
+  - { offset: 0x6648, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto feed:]', symObjAddr: 0x795, symBinAddr: 0x2F55, symSize: 0xB }
+  - { offset: 0x6683, size: 0x8, addend: 0x0, symName: '-[AudioPlayerFlauto .cxx_destruct]', symObjAddr: 0x7A0, symBinAddr: 0x2F60, symSize: 0x28 }
+  - { offset: 0x66B3, size: 0x8, addend: 0x0, symName: '-[AudioEngine init:]', symObjAddr: 0x7C8, symBinAddr: 0x2F88, symSize: 0x291 }
+  - { offset: 0x68D0, size: 0x8, addend: 0x0, symName: '-[AudioEngine startPlayerFromBuffer:]', symObjAddr: 0xA59, symBinAddr: 0x3219, symSize: 0x12 }
+  - { offset: 0x6925, size: 0x8, addend: 0x0, symName: '-[AudioEngine startPlayerFromURL:codec:channels:sampleRate:bufferSize:]', symObjAddr: 0xA6B, symBinAddr: 0x322B, symSize: 0xCC }
+  - { offset: 0x6A2B, size: 0x8, addend: 0x0, symName: '-[AudioEngine getDuration]', symObjAddr: 0xB37, symBinAddr: 0x32F7, symSize: 0x12 }
+  - { offset: 0x6A70, size: 0x8, addend: 0x0, symName: '-[AudioEngine getPosition]', symObjAddr: 0xB49, symBinAddr: 0x3309, symSize: 0x3B }
+  - { offset: 0x6AC0, size: 0x8, addend: 0x0, symName: '-[AudioEngine stop]', symObjAddr: 0xB84, symBinAddr: 0x3344, symSize: 0x9A }
+  - { offset: 0x6B32, size: 0x8, addend: 0x0, symName: '-[AudioEngine play]', symObjAddr: 0xC1E, symBinAddr: 0x33DE, symSize: 0x19 }
+  - { offset: 0x6B72, size: 0x8, addend: 0x0, symName: '-[AudioEngine resume]', symObjAddr: 0xC37, symBinAddr: 0x33F7, symSize: 0x54 }
+  - { offset: 0x6BBF, size: 0x8, addend: 0x0, symName: '-[AudioEngine pause]', symObjAddr: 0xC8B, symBinAddr: 0x344B, symSize: 0x2D }
+  - { offset: 0x6C0C, size: 0x8, addend: 0x0, symName: '-[AudioEngine seek:]', symObjAddr: 0xCB8, symBinAddr: 0x3478, symSize: 0x8 }
+  - { offset: 0x6C49, size: 0x8, addend: 0x0, symName: '-[AudioEngine getStatus]', symObjAddr: 0xCC0, symBinAddr: 0x3480, symSize: 0x3B }
+  - { offset: 0x6C89, size: 0x8, addend: 0x0, symName: '___20-[AudioEngine feed:]_block_invoke', symObjAddr: 0x1051, symBinAddr: 0x3811, symSize: 0x1F }
+  - { offset: 0x6CE2, size: 0x8, addend: 0x0, symName: ___copy_helper_block_ea8_32s, symObjAddr: 0x1070, symBinAddr: 0x3830, symSize: 0xF }
+  - { offset: 0x6D11, size: 0x8, addend: 0x0, symName: '___20-[AudioEngine feed:]_block_invoke.151', symObjAddr: 0x108E, symBinAddr: 0x384E, symSize: 0x4F }
+  - { offset: 0x6D87, size: 0x8, addend: 0x0, symName: '___20-[AudioEngine feed:]_block_invoke_2', symObjAddr: 0x10DD, symBinAddr: 0x389D, symSize: 0x115 }
+  - { offset: 0x6E9B, size: 0x8, addend: 0x0, symName: '___20-[AudioEngine feed:]_block_invoke_2.cold.1', symObjAddr: 0x19FA, symBinAddr: 0x648A, symSize: 0x23 }
+  - { offset: 0x6EB2, size: 0x8, addend: 0x0, symName: '-[AudioEngine setVolume:fadeDuration:]', symObjAddr: 0x11F2, symBinAddr: 0x39B2, symSize: 0x72 }
+  - { offset: 0x6F2D, size: 0x8, addend: 0x0, symName: '-[AudioEngine setPan:]', symObjAddr: 0x1264, symBinAddr: 0x3A24, symSize: 0x47 }
+  - { offset: 0x6F84, size: 0x8, addend: 0x0, symName: '-[AudioEngine setSpeed:]', symObjAddr: 0x12AB, symBinAddr: 0x3A6B, symSize: 0x8D }
+  - { offset: 0x6FEA, size: 0x8, addend: 0x0, symName: '-[AudioEngine .cxx_destruct]', symObjAddr: 0x1338, symBinAddr: 0x3AF8, symSize: 0x75 }
+  - { offset: 0x701A, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic init:]', symObjAddr: 0x13AD, symBinAddr: 0x3B6D, symSize: 0x73 }
+  - { offset: 0x7095, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic startPlayerFromBuffer:]', symObjAddr: 0x1420, symBinAddr: 0x3BE0, symSize: 0x6 }
+  - { offset: 0x70CE, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic getDuration]', symObjAddr: 0x1426, symBinAddr: 0x3BE6, symSize: 0x12 }
+  - { offset: 0x7114, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic getPosition]', symObjAddr: 0x1438, symBinAddr: 0x3BF8, symSize: 0x3B }
+  - { offset: 0x7166, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic startPlayerFromURL:codec:channels:sampleRate:bufferSize:]', symObjAddr: 0x1473, symBinAddr: 0x3C33, symSize: 0x39D }
+  - { offset: 0x74BE, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic stop]', symObjAddr: 0x1810, symBinAddr: 0x3FD0, symSize: 0x3E }
+  - { offset: 0x7505, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic play]', symObjAddr: 0x184E, symBinAddr: 0x400E, symSize: 0x121 }
+  - { offset: 0x763F, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic resume]', symObjAddr: 0x196F, symBinAddr: 0x412F, symSize: 0x8 }
+  - { offset: 0x7670, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic pause]', symObjAddr: 0x1977, symBinAddr: 0x4137, symSize: 0x8 }
+  - { offset: 0x76A1, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic seek:]', symObjAddr: 0x197F, symBinAddr: 0x413F, symSize: 0x8 }
+  - { offset: 0x76DE, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic getStatus]', symObjAddr: 0x1987, symBinAddr: 0x4147, symSize: 0x10 }
+  - { offset: 0x7711, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic setVolume:fadeDuration:]', symObjAddr: 0x1997, symBinAddr: 0x4157, symSize: 0x8 }
+  - { offset: 0x775A, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic setPan:]', symObjAddr: 0x199F, symBinAddr: 0x415F, symSize: 0x8 }
+  - { offset: 0x7797, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic setSpeed:]', symObjAddr: 0x19A7, symBinAddr: 0x4167, symSize: 0x8 }
+  - { offset: 0x77D4, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic feed:]', symObjAddr: 0x19AF, symBinAddr: 0x416F, symSize: 0x8 }
+  - { offset: 0x7811, size: 0x8, addend: 0x0, symName: '-[AudioEngineFromMic .cxx_destruct]', symObjAddr: 0x19B7, symBinAddr: 0x4177, symSize: 0x39 }
+  - { offset: 0x8E15, size: 0x8, addend: 0x0, symName: _tabSessionPort, symObjAddr: 0xAC50, symBinAddr: 0xC050, symSize: 0x0 }
+  - { offset: 0x8E41, size: 0x8, addend: 0x0, symName: _audioRec, symObjAddr: 0xACC0, symBinAddr: 0xC0C0, symSize: 0x0 }
+  - { offset: 0x9063, size: 0x8, addend: 0x0, symName: __ZL7formats, symObjAddr: 0x1850, symBinAddr: 0x67B0, symSize: 0x0 }
+  - { offset: 0x907C, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder recordingData:]', symObjAddr: 0x0, symBinAddr: 0x41B0, symSize: 0x16 }
+  - { offset: 0x90CC, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder init:]', symObjAddr: 0x16, symBinAddr: 0x41C6, symSize: 0x73 }
+  - { offset: 0x9145, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder initializeFlautoRecorder]', symObjAddr: 0x89, symBinAddr: 0x4239, symSize: 0x1E }
+  - { offset: 0x918A, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder isEncoderSupported:]', symObjAddr: 0xA7, symBinAddr: 0x4257, symSize: 0x12 }
+  - { offset: 0x91C7, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder releaseFlautoRecorder]', symObjAddr: 0xB9, symBinAddr: 0x4269, symSize: 0x51 }
+  - { offset: 0x922D, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder getpath:]', symObjAddr: 0x10A, symBinAddr: 0x42BA, symSize: 0x12F }
+  - { offset: 0x935A, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder getUrl:]', symObjAddr: 0x239, symBinAddr: 0x43E9, symSize: 0x146 }
+  - { offset: 0x948D, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder startRecorderCodec:toPath:channels:sampleRate:bitRate:bufferSize:enableVoiceProcessing:]', symObjAddr: 0x37F, symBinAddr: 0x452F, symSize: 0x386 }
+  - { offset: 0x9710, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder stop]', symObjAddr: 0x705, symBinAddr: 0x48B5, symSize: 0x90 }
+  - { offset: 0x979D, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder stopRecorder]', symObjAddr: 0x795, symBinAddr: 0x4945, symSize: 0xB2 }
+  - { offset: 0x9864, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder logDebug:]', symObjAddr: 0x847, symBinAddr: 0x49F7, symSize: 0x1E }
+  - { offset: 0x98BF, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder deleteRecord:]', symObjAddr: 0x865, symBinAddr: 0x4A15, symSize: 0xAE }
+  - { offset: 0x99C4, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder getRecordURL:]', symObjAddr: 0x913, symBinAddr: 0x4AC3, symSize: 0x22 }
+  - { offset: 0x9A24, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder startRecorderTimer]', symObjAddr: 0x935, symBinAddr: 0x4AE5, symSize: 0x6F }
+  - { offset: 0x9A7E, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder GetDirectoryOfType_FlutterSound:]', symObjAddr: 0x9A4, symBinAddr: 0x4B54, symSize: 0xAA }
+  - { offset: 0x9B5A, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder stopRecorderTimer]', symObjAddr: 0xA4E, symBinAddr: 0x4BFE, symSize: 0x3E }
+  - { offset: 0x9BA1, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder setSubscriptionDuration:]', symObjAddr: 0xA8C, symBinAddr: 0x4C3C, symSize: 0x30 }
+  - { offset: 0x9BE9, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder pauseRecorder]', symObjAddr: 0xABC, symBinAddr: 0x4C6C, symSize: 0x44 }
+  - { offset: 0x9C48, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder resumeRecorder]', symObjAddr: 0xB00, symBinAddr: 0x4CB0, symSize: 0x44 }
+  - { offset: 0x9CA7, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder updateRecorderProgress:]', symObjAddr: 0xB44, symBinAddr: 0x4CF4, symSize: 0xBD }
+  - { offset: 0x9D7C, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder getStatus]', symObjAddr: 0xC01, symBinAddr: 0x4DB1, symSize: 0x1B }
+  - { offset: 0x9DC5, size: 0x8, addend: 0x0, symName: '-[FlautoRecorder .cxx_destruct]', symObjAddr: 0xC1C, symBinAddr: 0x4DCC, symSize: 0x3E }
+  - { offset: 0xB695, size: 0x8, addend: 0x0, symName: __ZN19AudioRecorderEngineC2E7t_CODECP8NSStringP19NSMutableDictionarylbP14FlautoRecorder, symObjAddr: 0x0, symBinAddr: 0x4EB6, symSize: 0x58C }
+  - { offset: 0xBC5D, size: 0x8, addend: 0x0, symName: ____ZN19AudioRecorderEngineC2E7t_CODECP8NSStringP19NSMutableDictionarylbP14FlautoRecorder_block_invoke, symObjAddr: 0x58C, symBinAddr: 0x5442, symSize: 0x179 }
+  - { offset: 0xBDDF, size: 0x8, addend: 0x0, symName: ____ZN19AudioRecorderEngineC2E7t_CODECP8NSStringP19NSMutableDictionarylbP14FlautoRecorder_block_invoke_2, symObjAddr: 0x705, symBinAddr: 0x55BB, symSize: 0x1E }
+  - { offset: 0xBE22, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_ea8_32s, symObjAddr: 0x732, symBinAddr: 0x55DA, symSize: 0xF }
+  - { offset: 0xBE4B, size: 0x8, addend: 0x0, symName: ____ZN19AudioRecorderEngineC2E7t_CODECP8NSStringP19NSMutableDictionarylbP14FlautoRecorder_block_invoke.51, symObjAddr: 0x741, symBinAddr: 0x55E9, symSize: 0x2D4 }
+  - { offset: 0xC1C3, size: 0x8, addend: 0x0, symName: ____ZN19AudioRecorderEngineC2E7t_CODECP8NSStringP19NSMutableDictionarylbP14FlautoRecorder_block_invoke_2.57, symObjAddr: 0xA15, symBinAddr: 0x58BD, symSize: 0x21 }
+  - { offset: 0xC218, size: 0x8, addend: 0x0, symName: ____ZN19AudioRecorderEngineC2E7t_CODECP8NSStringP19NSMutableDictionarylbP14FlautoRecorder_block_invoke.63, symObjAddr: 0xA36, symBinAddr: 0x58DE, symSize: 0x40 }
+  - { offset: 0xC26D, size: 0x8, addend: 0x0, symName: ___copy_helper_block_ea8_32s40s, symObjAddr: 0xA76, symBinAddr: 0x591E, symSize: 0x25 }
+  - { offset: 0xC2A9, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_ea8_32s40s, symObjAddr: 0xA9B, symBinAddr: 0x5943, symSize: 0x25 }
+  - { offset: 0xC2DD, size: 0x8, addend: 0x0, symName: __ZN19AudioRecorderEngineC1E7t_CODECP8NSStringP19NSMutableDictionarylbP14FlautoRecorder, symObjAddr: 0xAC0, symBinAddr: 0x5968, symSize: 0xE }
+  - { offset: 0xC38F, size: 0x8, addend: 0x0, symName: __ZN19AudioRecorderEngine13startRecorderEv, symObjAddr: 0xACE, symBinAddr: 0x5976, symSize: 0x46 }
+  - { offset: 0xC3E0, size: 0x8, addend: 0x0, symName: __ZN19AudioRecorderEngine12stopRecorderEv, symObjAddr: 0xB14, symBinAddr: 0x59BC, symSize: 0x86 }
+  - { offset: 0xC436, size: 0x8, addend: 0x0, symName: __ZN19AudioRecorderEngine14resumeRecorderEv, symObjAddr: 0xB9A, symBinAddr: 0x5A42, symSize: 0x40 }
+  - { offset: 0xC47C, size: 0x8, addend: 0x0, symName: __ZN19AudioRecorderEngine13pauseRecorderEv, symObjAddr: 0xBDA, symBinAddr: 0x5A82, symSize: 0x64 }
+  - { offset: 0xC4BC, size: 0x8, addend: 0x0, symName: __ZN19AudioRecorderEngine16recorderProgressEv, symObjAddr: 0xC3E, symBinAddr: 0x5AE6, symSize: 0x54 }
+  - { offset: 0xC50B, size: 0x8, addend: 0x0, symName: __ZN19AudioRecorderEngine14dbPeakProgressEv, symObjAddr: 0xC92, symBinAddr: 0x5B3A, symSize: 0x60 }
+  - { offset: 0xC598, size: 0x8, addend: 0x0, symName: __ZN19AudioRecorderEngine9getStatusEv, symObjAddr: 0xCF2, symBinAddr: 0x5B9A, symSize: 0xA }
+  - { offset: 0xC6F0, size: 0x8, addend: 0x0, symName: __ZN10avAudioRecC2E7t_CODECP8NSStringP19NSMutableDictionaryP14FlautoRecorder, symObjAddr: 0xCFC, symBinAddr: 0x5BA4, symSize: 0x12E }
+  - { offset: 0xC8B4, size: 0x8, addend: 0x0, symName: __ZN10avAudioRecC1E7t_CODECP8NSStringP19NSMutableDictionaryP14FlautoRecorder, symObjAddr: 0xE2A, symBinAddr: 0x5CD2, symSize: 0xA }
+  - { offset: 0xC93D, size: 0x8, addend: 0x0, symName: __ZN10avAudioRecD2Ev, symObjAddr: 0xE34, symBinAddr: 0x5CDC, symSize: 0x4C }
+  - { offset: 0xC9AC, size: 0x8, addend: 0x0, symName: __ZN10avAudioRecD1Ev, symObjAddr: 0xE8E, symBinAddr: 0x5D36, symSize: 0xA }
+  - { offset: 0xCA04, size: 0x8, addend: 0x0, symName: __ZN10avAudioRecD0Ev, symObjAddr: 0xE98, symBinAddr: 0x5D40, symSize: 0x1C }
+  - { offset: 0xCA65, size: 0x8, addend: 0x0, symName: __ZN10avAudioRec13startRecorderEv, symObjAddr: 0xEB4, symBinAddr: 0x5D5C, symSize: 0x60 }
+  - { offset: 0xCAC0, size: 0x8, addend: 0x0, symName: __ZN10avAudioRec12stopRecorderEv, symObjAddr: 0xF14, symBinAddr: 0x5DBC, symSize: 0x1A }
+  - { offset: 0xCAF4, size: 0x8, addend: 0x0, symName: __ZN10avAudioRec14resumeRecorderEv, symObjAddr: 0xF2E, symBinAddr: 0x5DD6, symSize: 0x26 }
+  - { offset: 0xCB28, size: 0x8, addend: 0x0, symName: __ZN10avAudioRec13pauseRecorderEv, symObjAddr: 0xF54, symBinAddr: 0x5DFC, symSize: 0x26 }
+  - { offset: 0xCB5C, size: 0x8, addend: 0x0, symName: __ZN10avAudioRec16recorderProgressEv, symObjAddr: 0xF7A, symBinAddr: 0x5E22, symSize: 0x82 }
+  - { offset: 0xCBC8, size: 0x8, addend: 0x0, symName: __ZN10avAudioRec14dbPeakProgressEv, symObjAddr: 0xFFC, symBinAddr: 0x5EA4, symSize: 0x5A }
+  - { offset: 0xCC47, size: 0x8, addend: 0x0, symName: __ZN10avAudioRec9getStatusEv, symObjAddr: 0x1056, symBinAddr: 0x5EFE, symSize: 0x30 }
+  - { offset: 0xCC9A, size: 0x8, addend: 0x0, symName: __ZN19AudioRecorderEngineD1Ev, symObjAddr: 0x1086, symBinAddr: 0x5F2E, symSize: 0x34 }
+  - { offset: 0xCD43, size: 0x8, addend: 0x0, symName: __ZN19AudioRecorderEngineD0Ev, symObjAddr: 0x10BA, symBinAddr: 0x5F62, symSize: 0x39 }
+...

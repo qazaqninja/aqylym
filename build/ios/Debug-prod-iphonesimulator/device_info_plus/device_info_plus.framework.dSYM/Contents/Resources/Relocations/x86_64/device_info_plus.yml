@@ -1,0 +1,13 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/yerassyltynymbay/aqylym/build/ios/Debug-prod-iphonesimulator/device_info_plus/device_info_plus.framework/device_info_plus'
+relocations:
+  - { offset: 0x3CF3, size: 0x8, addend: 0x0, symName: _device_info_plusVersionString, symObjAddr: 0x0, symBinAddr: 0x37C0, symSize: 0x0 }
+  - { offset: 0x3D27, size: 0x8, addend: 0x0, symName: _device_info_plusVersionNumber, symObjAddr: 0x30, symBinAddr: 0x37F0, symSize: 0x0 }
+  - { offset: 0x3D63, size: 0x8, addend: 0x0, symName: '+[DeviceIdentifiers userKnownDeviceModel:]', symObjAddr: 0x0, symBinAddr: 0x1B00, symSize: 0xF5E }
+  - { offset: 0x3D70, size: 0x8, addend: 0x0, symName: '+[DeviceIdentifiers userKnownDeviceModel:]', symObjAddr: 0x0, symBinAddr: 0x1B00, symSize: 0xF5E }
+  - { offset: 0x49D3, size: 0x8, addend: 0x0, symName: '+[FPPDeviceInfoPlusPlugin registerWithRegistrar:]', symObjAddr: 0x0, symBinAddr: 0x2A60, symSize: 0xC3 }
+  - { offset: 0x49F0, size: 0x8, addend: 0x0, symName: '+[FPPDeviceInfoPlusPlugin registerWithRegistrar:]', symObjAddr: 0x0, symBinAddr: 0x2A60, symSize: 0xC3 }
+  - { offset: 0x4AD6, size: 0x8, addend: 0x0, symName: '-[FPPDeviceInfoPlusPlugin handleMethodCall:result:]', symObjAddr: 0xC3, symBinAddr: 0x2B23, symSize: 0x66D }
+  - { offset: 0x4F5B, size: 0x8, addend: 0x0, symName: '-[FPPDeviceInfoPlusPlugin isDevicePhysical]', symObjAddr: 0x730, symBinAddr: 0x3190, symSize: 0x10 }
+...

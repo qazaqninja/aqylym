@@ -1,50 +1,126 @@
+import 'package:aqylym/src/core/theme/app_icons.dart';
 import 'package:aqylym/src/core/theme/colors.dart';
+import 'package:aqylym/src/core/utils/constants/profile_constants.dart';
+import 'package:aqylym/src/features/profile/widgets/custom_switch.dart';
+import 'package:aqylym/src/features/profile/widgets/profile_header.dart';
+import 'package:aqylym/src/features/profile/widgets/profile_section_widget.dart';
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatelessWidget {
-  // final String firstName;
-  // final String lastName;
+class ProfileSection {
+  final String title;
+  final List<ProfileItem> items;
+  final Color backgroundColor;
 
-  const ProfilePage({
-    super.key,
-    // required this.firstName,
-    // required this.lastName,
+  const ProfileSection({
+    required this.title,
+    required this.items,
+    this.backgroundColor = AppColors.containerColor,
   });
+}
 
-  // String get initials {
-  //   final firstInitial = firstName.isNotEmpty ? firstName[0].toUpperCase() : '';
-  //   final lastInitial = lastName.isNotEmpty ? lastName[0].toUpperCase() : '';
-  //   return '$firstInitial$lastInitial';
-  // }
+class ProfileItem {
+  final String title;
+  final Widget? trailing;
+  final VoidCallback? onTap;
+
+  const ProfileItem({
+    required this.title,
+    this.trailing,
+    this.onTap,
+  });
+}
+
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({super.key});
+
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  bool isEnabled = false;
+
+  List<ProfileSection> get _sections => [
+        ProfileSection(
+          title: 'Основное',
+          items: [
+            ProfileItem(
+              title: 'Пройти диагностический тест',
+              trailing: const Icon(AppIcons.chevron_right, color: AppColors.blackFont, size: 20),
+              onTap: () {},
+            ),
+            ProfileItem(
+              title: 'Добавить отслеживателя',
+              trailing: const Icon(AppIcons.chevron_right, color: AppColors.blackFont, size: 20),
+              onTap: () {},
+            ),
+            ProfileItem(
+              title: 'Напоминания',
+              trailing: CustomSwitch(
+                value: isEnabled,
+                onChanged: (value) {
+                  setState(() => isEnabled = value);
+                },
+              ),
+            ),
+          ],
+        ),
+        ProfileSection(
+          title: 'Информация аккаунта',
+          items: [
+            ProfileItem(
+              title: 'Логин',
+              trailing: const Icon(AppIcons.chevron_right, color: AppColors.blackFont, size: 20),
+              onTap: () {},
+            ),
+            ProfileItem(
+              title: 'Пароль',
+              trailing: const Icon(AppIcons.chevron_right, color: AppColors.blackFont, size: 20),
+              onTap: () {},
+            ),
+            ProfileItem(
+              title: 'Возраст',
+              trailing: const Icon(AppIcons.chevron_right, color: AppColors.blackFont, size: 20),
+              onTap: () {},
+            ),
+          ],
+        ),
+        ProfileSection(
+          title: 'Экспортировать',
+          backgroundColor: AppColors.backgroundOfName,
+          items: [
+            ProfileItem(
+              title: 'Скачать книги',
+              onTap: () {},
+            ),
+          ],
+        ),
+      ];
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       extendBody: true,
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(ProfileConstants.kPadding),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Center(
-                child: CircleAvatar(
-                  radius: 40,
-                  backgroundColor: AppColors.backgroundOfName,
-                  child: Text(
-                    'AS',
-                    style: TextStyle(
-                      fontFamily: 'SFUIDisplay',
-                      fontWeight: FontWeight.w600,
-                      fontSize: 32,
-                      color: AppColors.mint,
-                    ),
+              const ProfileHeader(
+                initials: 'AK',
+                name: 'Алуа Климова',
+              ),
+              const SizedBox(height: 41),
+              ...List.generate(
+                _sections.length,
+                (index) => Padding(
+                  padding: EdgeInsets.only(
+                    bottom: index < _sections.length - 1 ? ProfileConstants.kSectionSpacing : 0,
                   ),
+                  child: ProfileSectionWidget(section: _sections[index]),
                 ),
               ),
-              SizedBox(height: 24),
-              // Add more profile content here
             ],
           ),
         ),

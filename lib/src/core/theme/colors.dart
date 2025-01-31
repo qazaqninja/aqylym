@@ -15,4 +15,7 @@ class AppColors {
   static const greyGame = Color(0xfff4f4f4);
   static const darkGrey = Color(0xff3e3e3e);
   static const backgroundOfName = Color(0xffE8F0FB);
+  static const containerColor = Color(0xffF2F2F2);
+  static const dividerColor = Color(0xffE6E6E6);
+  static const switchColor = Color(0xff8D8D8D);
 }

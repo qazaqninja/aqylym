@@ -1,0 +1,103 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/yerassyltynymbay/aqylym/build/ios/Debug-prod-iphonesimulator/file_picker/file_picker.framework/file_picker'
+relocations:
+  - { offset: 0x21F9A, size: 0x8, addend: 0x0, symName: _file_pickerVersionString, symObjAddr: 0x0, symBinAddr: 0x8AA8, symSize: 0x0 }
+  - { offset: 0x21FCE, size: 0x8, addend: 0x0, symName: _file_pickerVersionNumber, symObjAddr: 0x30, symBinAddr: 0x8AD8, symSize: 0x0 }
+  - { offset: 0x2200A, size: 0x8, addend: 0x0, symName: '-[FileInfo initWithPath:andUrl:andName:andSize:andData:]', symObjAddr: 0x0, symBinAddr: 0x1B90, symSize: 0x114 }
+  - { offset: 0x220F0, size: 0x8, addend: 0x0, symName: '-[FileInfo initWithPath:andUrl:andName:andSize:andData:]', symObjAddr: 0x0, symBinAddr: 0x1B90, symSize: 0x114 }
+  - { offset: 0x2216F, size: 0x8, addend: 0x0, symName: '-[FileInfo toData]', symObjAddr: 0x114, symBinAddr: 0x1CA4, symSize: 0x140 }
+  - { offset: 0x221B2, size: 0x8, addend: 0x0, symName: '-[FileInfo path]', symObjAddr: 0x254, symBinAddr: 0x1DE4, symSize: 0x8 }
+  - { offset: 0x221E6, size: 0x8, addend: 0x0, symName: '-[FileInfo setPath:]', symObjAddr: 0x25C, symBinAddr: 0x1DEC, symSize: 0xC }
+  - { offset: 0x22223, size: 0x8, addend: 0x0, symName: '-[FileInfo name]', symObjAddr: 0x268, symBinAddr: 0x1DF8, symSize: 0x8 }
+  - { offset: 0x22257, size: 0x8, addend: 0x0, symName: '-[FileInfo setName:]', symObjAddr: 0x270, symBinAddr: 0x1E00, symSize: 0xC }
+  - { offset: 0x22294, size: 0x8, addend: 0x0, symName: '-[FileInfo url]', symObjAddr: 0x27C, symBinAddr: 0x1E0C, symSize: 0x8 }
+  - { offset: 0x222C8, size: 0x8, addend: 0x0, symName: '-[FileInfo setUrl:]', symObjAddr: 0x284, symBinAddr: 0x1E14, symSize: 0xC }
+  - { offset: 0x22305, size: 0x8, addend: 0x0, symName: '-[FileInfo size]', symObjAddr: 0x290, symBinAddr: 0x1E20, symSize: 0x8 }
+  - { offset: 0x22339, size: 0x8, addend: 0x0, symName: '-[FileInfo setSize:]', symObjAddr: 0x298, symBinAddr: 0x1E28, symSize: 0xC }
+  - { offset: 0x22376, size: 0x8, addend: 0x0, symName: '-[FileInfo bytes]', symObjAddr: 0x2A4, symBinAddr: 0x1E34, symSize: 0x8 }
+  - { offset: 0x223AA, size: 0x8, addend: 0x0, symName: '-[FileInfo setBytes:]', symObjAddr: 0x2AC, symBinAddr: 0x1E3C, symSize: 0xC }
+  - { offset: 0x223E7, size: 0x8, addend: 0x0, symName: '-[FileInfo isDirectory]', symObjAddr: 0x2B8, symBinAddr: 0x1E48, symSize: 0x8 }
+  - { offset: 0x2241B, size: 0x8, addend: 0x0, symName: '-[FileInfo setIsDirectory:]', symObjAddr: 0x2C0, symBinAddr: 0x1E50, symSize: 0xC }
+  - { offset: 0x22458, size: 0x8, addend: 0x0, symName: '-[FileInfo .cxx_destruct]', symObjAddr: 0x2CC, symBinAddr: 0x1E5C, symSize: 0x60 }
+  - { offset: 0x224DD, size: 0x8, addend: 0x0, symName: '+[FilePickerPlugin registerWithRegistrar:]', symObjAddr: 0x0, symBinAddr: 0x1EBC, symSize: 0xF8 }
+  - { offset: 0x2279D, size: 0x8, addend: 0x0, symName: '+[FilePickerPlugin registerWithRegistrar:]', symObjAddr: 0x0, symBinAddr: 0x1EBC, symSize: 0xF8 }
+  - { offset: 0x22805, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin init]', symObjAddr: 0xF8, symBinAddr: 0x1FB4, symSize: 0x34 }
+  - { offset: 0x22839, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin viewControllerWithWindow:]', symObjAddr: 0x12C, symBinAddr: 0x1FE8, symSize: 0x1D0 }
+  - { offset: 0x228AB, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin onListenWithArguments:eventSink:]', symObjAddr: 0x2FC, symBinAddr: 0x21B8, symSize: 0x38 }
+  - { offset: 0x228F9, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin onCancelWithArguments:]', symObjAddr: 0x334, symBinAddr: 0x21F0, symSize: 0x24 }
+  - { offset: 0x22938, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin handleMethodCall:result:]', symObjAddr: 0x358, symBinAddr: 0x2214, symSize: 0x5D8 }
+  - { offset: 0x22A44, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin getDocumentDirectory]', symObjAddr: 0x930, symBinAddr: 0x27EC, symSize: 0x50 }
+  - { offset: 0x22ABB, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin saveFileWithName:fileType:initialDirectory:bytes:]', symObjAddr: 0x980, symBinAddr: 0x283C, symSize: 0x3E8 }
+  - { offset: 0x22B8F, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin resolvePickDocumentWithMultiPick:pickDirectory:]', symObjAddr: 0xD68, symBinAddr: 0x2C24, symSize: 0x1F0 }
+  - { offset: 0x22BF6, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin resolvePickMedia:withMultiPick:withCompressionAllowed:]', symObjAddr: 0xF58, symBinAddr: 0x2E14, symSize: 0x4F0 }
+  - { offset: 0x22C97, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin resolveMultiPickFromGallery:withCompressionAllowed:]', symObjAddr: 0x1448, symBinAddr: 0x3304, symSize: 0x3E0 }
+  - { offset: 0x22D38, size: 0x8, addend: 0x0, symName: '___71-[FilePickerPlugin resolveMultiPickFromGallery:withCompressionAllowed:]_block_invoke', symObjAddr: 0x1828, symBinAddr: 0x36E4, symSize: 0xF0 }
+  - { offset: 0x22DDF, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48s56s64s, symObjAddr: 0x1918, symBinAddr: 0x37D4, symSize: 0x40 }
+  - { offset: 0x22E05, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s48s56s64s, symObjAddr: 0x1958, symBinAddr: 0x3814, symSize: 0x40 }
+  - { offset: 0x22E22, size: 0x8, addend: 0x0, symName: '___71-[FilePickerPlugin resolveMultiPickFromGallery:withCompressionAllowed:]_block_invoke.74', symObjAddr: 0x1998, symBinAddr: 0x3854, symSize: 0x3C }
+  - { offset: 0x22E73, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s, symObjAddr: 0x19D4, symBinAddr: 0x3890, symSize: 0x8 }
+  - { offset: 0x22E99, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s, symObjAddr: 0x19DC, symBinAddr: 0x3898, symSize: 0x8 }
+  - { offset: 0x22EB6, size: 0x8, addend: 0x0, symName: '___71-[FilePickerPlugin resolveMultiPickFromGallery:withCompressionAllowed:]_block_invoke.76', symObjAddr: 0x19E4, symBinAddr: 0x38A0, symSize: 0x1A8 }
+  - { offset: 0x22F41, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin resolvePickAudioWithMultiPick:]', symObjAddr: 0x1B8C, symBinAddr: 0x3A48, symSize: 0x1A4 }
+  - { offset: 0x23090, size: 0x8, addend: 0x0, symName: '___50-[FilePickerPlugin resolvePickAudioWithMultiPick:]_block_invoke', symObjAddr: 0x1D30, symBinAddr: 0x3BEC, symSize: 0x44 }
+  - { offset: 0x230CF, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin handleResult:]', symObjAddr: 0x1D74, symBinAddr: 0x3C30, symSize: 0x120 }
+  - { offset: 0x23128, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin documentPicker:didPickDocumentsAtURLs:]', symObjAddr: 0x1E94, symBinAddr: 0x3D50, symSize: 0x4C0 }
+  - { offset: 0x23243, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin imagePickerController:didFinishPickingMediaWithInfo:]', symObjAddr: 0x2354, symBinAddr: 0x4210, symSize: 0x258 }
+  - { offset: 0x23308, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin picker:didFinishPicking:]', symObjAddr: 0x25AC, symBinAddr: 0x4468, symSize: 0x3CC }
+  - { offset: 0x2357C, size: 0x8, addend: 0x0, symName: '___44-[FilePickerPlugin picker:didFinishPicking:]_block_invoke', symObjAddr: 0x2978, symBinAddr: 0x4834, symSize: 0x174 }
+  - { offset: 0x2364B, size: 0x8, addend: 0x0, symName: '___44-[FilePickerPlugin picker:didFinishPicking:]_block_invoke_2', symObjAddr: 0x2AEC, symBinAddr: 0x49A8, symSize: 0x4BC }
+  - { offset: 0x237AE, size: 0x8, addend: 0x0, symName: '___44-[FilePickerPlugin picker:didFinishPicking:]_block_invoke_3', symObjAddr: 0x2FA8, symBinAddr: 0x4E64, symSize: 0x118 }
+  - { offset: 0x23827, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40r, symObjAddr: 0x30C0, symBinAddr: 0x4F7C, symSize: 0x34 }
+  - { offset: 0x2384D, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40r, symObjAddr: 0x30F4, symBinAddr: 0x4FB0, symSize: 0x2C }
+  - { offset: 0x2386A, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48s56s64r, symObjAddr: 0x3120, symBinAddr: 0x4FDC, symSize: 0x4C }
+  - { offset: 0x23890, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s48s56s64r, symObjAddr: 0x316C, symBinAddr: 0x5028, symSize: 0x44 }
+  - { offset: 0x238AD, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48s56s64s72r, symObjAddr: 0x31B0, symBinAddr: 0x506C, symSize: 0x54 }
+  - { offset: 0x238D3, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s48s56s64s72r, symObjAddr: 0x3204, symBinAddr: 0x50C0, symSize: 0x4C }
+  - { offset: 0x238F0, size: 0x8, addend: 0x0, symName: '___44-[FilePickerPlugin picker:didFinishPicking:]_block_invoke.121', symObjAddr: 0x3250, symBinAddr: 0x510C, symSize: 0x114 }
+  - { offset: 0x2397F, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48s, symObjAddr: 0x3364, symBinAddr: 0x5220, symSize: 0x30 }
+  - { offset: 0x239A5, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s48s, symObjAddr: 0x3394, symBinAddr: 0x5250, symSize: 0x30 }
+  - { offset: 0x239C2, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin mediaPicker:didPickMediaItems:]', symObjAddr: 0x33C4, symBinAddr: 0x5280, symSize: 0x2A0 }
+  - { offset: 0x23A8F, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin presentationControllerDidDismiss:]', symObjAddr: 0x3664, symBinAddr: 0x5520, symSize: 0x70 }
+  - { offset: 0x23ADE, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin mediaPickerDidCancel:]', symObjAddr: 0x36D4, symBinAddr: 0x5590, symSize: 0x64 }
+  - { offset: 0x23B36, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin documentPickerWasCancelled:]', symObjAddr: 0x3738, symBinAddr: 0x55F4, symSize: 0x64 }
+  - { offset: 0x23B8E, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin imagePickerControllerDidCancel:]', symObjAddr: 0x379C, symBinAddr: 0x5658, symSize: 0x64 }
+  - { offset: 0x23BE7, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin result]', symObjAddr: 0x3800, symBinAddr: 0x56BC, symSize: 0x8 }
+  - { offset: 0x23C1B, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin setResult:]', symObjAddr: 0x3808, symBinAddr: 0x56C4, symSize: 0x8 }
+  - { offset: 0x23C5A, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin eventSink]', symObjAddr: 0x3810, symBinAddr: 0x56CC, symSize: 0x8 }
+  - { offset: 0x23C8E, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin setEventSink:]', symObjAddr: 0x3818, symBinAddr: 0x56D4, symSize: 0x8 }
+  - { offset: 0x23CCC, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin galleryPickerController]', symObjAddr: 0x3820, symBinAddr: 0x56DC, symSize: 0x8 }
+  - { offset: 0x23D00, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin setGalleryPickerController:]', symObjAddr: 0x3828, symBinAddr: 0x56E4, symSize: 0xC }
+  - { offset: 0x23D3D, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin documentPickerController]', symObjAddr: 0x3834, symBinAddr: 0x56F0, symSize: 0x8 }
+  - { offset: 0x23D71, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin setDocumentPickerController:]', symObjAddr: 0x383C, symBinAddr: 0x56F8, symSize: 0xC }
+  - { offset: 0x23DAE, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin interactionController]', symObjAddr: 0x3848, symBinAddr: 0x5704, symSize: 0x8 }
+  - { offset: 0x23DE2, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin setInteractionController:]', symObjAddr: 0x3850, symBinAddr: 0x570C, symSize: 0xC }
+  - { offset: 0x23E1F, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin audioPickerController]', symObjAddr: 0x385C, symBinAddr: 0x5718, symSize: 0x8 }
+  - { offset: 0x23E53, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin setAudioPickerController:]', symObjAddr: 0x3864, symBinAddr: 0x5720, symSize: 0xC }
+  - { offset: 0x23E90, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin allowedExtensions]', symObjAddr: 0x3870, symBinAddr: 0x572C, symSize: 0x8 }
+  - { offset: 0x23EC4, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin setAllowedExtensions:]', symObjAddr: 0x3878, symBinAddr: 0x5734, symSize: 0xC }
+  - { offset: 0x23F02, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin loadDataToMemory]', symObjAddr: 0x3884, symBinAddr: 0x5740, symSize: 0x8 }
+  - { offset: 0x23F36, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin setLoadDataToMemory:]', symObjAddr: 0x388C, symBinAddr: 0x5748, symSize: 0x8 }
+  - { offset: 0x23F70, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin allowCompression]', symObjAddr: 0x3894, symBinAddr: 0x5750, symSize: 0x8 }
+  - { offset: 0x23FA4, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin setAllowCompression:]', symObjAddr: 0x389C, symBinAddr: 0x5758, symSize: 0x8 }
+  - { offset: 0x23FDE, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin group]', symObjAddr: 0x38A4, symBinAddr: 0x5760, symSize: 0x8 }
+  - { offset: 0x24012, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin setGroup:]', symObjAddr: 0x38AC, symBinAddr: 0x5768, symSize: 0xC }
+  - { offset: 0x24051, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin isSaveFile]', symObjAddr: 0x38B8, symBinAddr: 0x5774, symSize: 0x8 }
+  - { offset: 0x24085, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin setIsSaveFile:]', symObjAddr: 0x38C0, symBinAddr: 0x577C, symSize: 0x8 }
+  - { offset: 0x240BE, size: 0x8, addend: 0x0, symName: '-[FilePickerPlugin .cxx_destruct]', symObjAddr: 0x38C8, symBinAddr: 0x5784, symSize: 0x78 }
+  - { offset: 0x246F8, size: 0x8, addend: 0x0, symName: '+[FileUtils clearTemporaryFiles]', symObjAddr: 0x0, symBinAddr: 0x57FC, symSize: 0x1C8 }
+  - { offset: 0x24763, size: 0x8, addend: 0x0, symName: '+[FileUtils clearTemporaryFiles]', symObjAddr: 0x0, symBinAddr: 0x57FC, symSize: 0x1C8 }
+  - { offset: 0x2480B, size: 0x8, addend: 0x0, symName: '+[FileUtils resolveType:withAllowedExtensions:]', symObjAddr: 0x1C8, symBinAddr: 0x59C4, symSize: 0x2F4 }
+  - { offset: 0x24928, size: 0x8, addend: 0x0, symName: '+[FileUtils resolveMediaType:]', symObjAddr: 0x4BC, symBinAddr: 0x5CB8, symSize: 0x64 }
+  - { offset: 0x24967, size: 0x8, addend: 0x0, symName: '+[FileUtils resolveFileInfo:withData:]', symObjAddr: 0x520, symBinAddr: 0x5D1C, symSize: 0x2BC }
+  - { offset: 0x24A05, size: 0x8, addend: 0x0, symName: '+[FileUtils exportMusicAsset:withName:]', symObjAddr: 0x7DC, symBinAddr: 0x5FD8, symSize: 0x1CC }
+  - { offset: 0x24B3E, size: 0x8, addend: 0x0, symName: '___39+[FileUtils exportMusicAsset:withName:]_block_invoke', symObjAddr: 0x9A8, symBinAddr: 0x61A4, symSize: 0xA8 }
+  - { offset: 0x24BED, size: 0x8, addend: 0x0, symName: '___39+[FileUtils exportMusicAsset:withName:]_block_invoke_2', symObjAddr: 0xA50, symBinAddr: 0x624C, symSize: 0x78 }
+  - { offset: 0x24C6F, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s, symObjAddr: 0xAC8, symBinAddr: 0x62C4, symSize: 0x28 }
+  - { offset: 0x24C95, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s, symObjAddr: 0xAF0, symBinAddr: 0x62EC, symSize: 0x28 }
+  - { offset: 0x24E54, size: 0x8, addend: 0x0, symName: '+[ImageUtils hasAlpha:]', symObjAddr: 0x0, symBinAddr: 0x6314, symSize: 0x2C }
+  - { offset: 0x24ECE, size: 0x8, addend: 0x0, symName: '+[ImageUtils hasAlpha:]', symObjAddr: 0x0, symBinAddr: 0x6314, symSize: 0x2C }
+  - { offset: 0x24F62, size: 0x8, addend: 0x0, symName: '+[ImageUtils saveTmpImage:]', symObjAddr: 0x2C, symBinAddr: 0x6340, symSize: 0x19C }
+  - { offset: 0x250A7, size: 0x8, addend: 0x0, symName: '+[ImageUtils getMetaDataFromImageData:]', symObjAddr: 0x1C8, symBinAddr: 0x64DC, symSize: 0x44 }
+  - { offset: 0x251D0, size: 0x8, addend: 0x0, symName: '+[ImageUtils imageFromImage:withMetaData:]', symObjAddr: 0x20C, symBinAddr: 0x6520, symSize: 0xF4 }
+...
