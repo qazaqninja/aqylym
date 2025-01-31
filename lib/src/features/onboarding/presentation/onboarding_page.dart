@@ -2,6 +2,7 @@ import 'package:aqylym/src/app/imports.dart';
 import 'package:aqylym/src/core/router/router.dart';
 import 'package:aqylym/src/core/theme/colors.dart';
 import 'package:aqylym/src/core/theme/theme.dart';
+import 'package:flutter/gestures.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingPage extends StatefulWidget {
@@ -46,7 +47,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   void _handleNext() {
     if (isLastPage) {
-      context.push(RoutePaths.login);
+      context.pushNamed(RouteNames.registration);
     } else {
       _controller.nextPage(
         duration: const Duration(milliseconds: 300),
@@ -71,7 +72,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
             mainAxisSize: MainAxisSize.min,
             children: [
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.85,
+                height: MediaQuery.of(context).size.height * 0.84,
                 child: PageView.builder(
                   controller: _controller,
                   itemCount: onboardingData.length,
@@ -113,7 +114,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         onTap: _handleNext,
                         child: Center(
                           child: Text(
-                            isLastPage ? 'Начать' : 'Следующий',
+                            isLastPage ? 'Зарегестрироваться' : 'Следующий',
                             style: FigmaTextstyle.bodyRegular20px.copyWith(
                               color: Colors.white,
                             ),
@@ -121,20 +122,48 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         ),
                       ),
                     ),
-                    if (!isLastPage) ...[
-                      const SizedBox(height: 16),
-                      InkWell(
-                        splashColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: _handleSkip,
-                        child: Text(
-                          'Пропустить',
-                          style: FigmaTextstyle.bodyRegular20px.copyWith(
-                            color: AppColors.blackFont,
+                    const SizedBox(height: 16),
+                    isLastPage
+                        ? RichText(
+                            text: TextSpan(
+                              text: 'Уже есть аккаунт?',
+                              style: const TextStyle(
+                                fontFamily: 'SFUIDisplay',
+                                fontSize: 18,
+                                fontWeight: FontWeight.w400,
+                                color: AppColors.blackFont,
+                              ),
+                              children: <TextSpan>[
+                                TextSpan(
+                                  recognizer: TapGestureRecognizer()
+                                    ..onTap = () {
+                                      context.push(RoutePaths.login);
+                                    },
+                                  text: ' Войти',
+                                  style: const TextStyle(
+                                    fontFamily: 'SFUIDisplay',
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w400,
+                                    color: AppColors.mint,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            textAlign: TextAlign.center,
+                          )
+                        : InkWell(
+                            splashColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () {
+                              context.pushNamed(RouteNames.registration);
+                            },
+                            child: Text(
+                              'Пропустить',
+                              style: FigmaTextstyle.bodyRegular20px.copyWith(
+                                color: AppColors.blackFont,
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                    ],
                     const SizedBox(height: 16),
                   ],
                 ),

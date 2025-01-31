@@ -1,4 +1,5 @@
 import 'package:aqylym/src/app/imports.dart';
+import 'package:aqylym/src/core/router/router.dart';
 import 'package:aqylym/src/core/theme/app_icons.dart';
 import 'package:aqylym/src/core/theme/colors.dart';
 import 'package:aqylym/src/core/theme/theme.dart';
@@ -211,7 +212,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
             TextSpan(
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
-                  context.pop();
+                  context.pushReplacement(RoutePaths.login);
                 },
               text: ' Войти',
               style: const TextStyle(
