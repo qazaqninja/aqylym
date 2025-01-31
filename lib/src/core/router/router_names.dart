@@ -9,4 +9,7 @@ class RouteNames {
   static const String initial = 'initial';
   static const String test = 'test';
   static const String testQuestion = 'test-questions';
+  static const String login = 'login';
+  static const String registration = 'registration';
+  static const String onboarding = 'onboarding';
 }

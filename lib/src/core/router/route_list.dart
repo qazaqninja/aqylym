@@ -100,4 +100,31 @@ List<RouteBase> _routes = [
       state: state,
     ),
   ),
+  GoRoute(
+    path: RoutePaths.onboarding,
+    pageBuilder: (context, state) => getPage(
+      child: const OnboardingPage(),
+      state: state,
+    ),
+  ),
+  GoRoute(
+    name: RouteNames.login,
+    path: RoutePaths.login,
+    builder: (context, GoRouterState state) {
+      return const LoginPage();
+    },
+    routes: [
+      GoRoute(
+        name: RouteNames.registration,
+        path: RoutePaths.registration,
+        pageBuilder: (context, state) => PageTransition.slideAndFade(
+          context: context,
+          state: state,
+          begin: const Offset(1.0, 0),
+          end: Offset.zero,
+          child: const RegistrationPage(),
+        ),
+      ),
+    ],
+  ),
 ];

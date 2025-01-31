@@ -1,5 +1,4 @@
 import 'package:aqylym/src/app/imports.dart';
-import 'package:aqylym/src/core/router/router.dart';
 import 'package:aqylym/src/core/theme/app_icons.dart';
 import 'package:aqylym/src/core/theme/colors.dart';
 import 'package:aqylym/src/core/theme/theme.dart';
@@ -8,14 +7,14 @@ import 'package:aqylym/src/features/login/presentation/components/password_text_
 import 'package:aqylym/src/features/test/diagnostic_test_page.dart';
 import 'package:flutter/gestures.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class RegistrationPage extends StatefulWidget {
+  const RegistrationPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegistrationPage> createState() => _RegistrationPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegistrationPageState extends State<RegistrationPage> {
   bool _isPasswordVisible = false;
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
@@ -61,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
               _buildHeader(),
               const SizedBox(height: 40),
               _buildForm(),
-              const SizedBox(height: 40),
+              const SizedBox(height: 10),
               _buildFooter(),
               const SizedBox(height: 20),
             ],
@@ -72,13 +71,13 @@ class _LoginPageState extends State<LoginPage> {
   Widget _buildHeader() => Column(
         children: [
           Text(
-            'Войти',
+            'Регистрация',
             style: FigmaTextstyle.medium24px.copyWith(color: AppColors.blackFont),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 9),
           const Text(
-            'C возвращением, войдите, чтобы продолжить',
+            'Завершите процесс регестрации,чтобы продолжить',
             style: TextStyle(
               color: Colors.black,
               fontSize: 18,
@@ -93,6 +92,7 @@ class _LoginPageState extends State<LoginPage> {
         key: _formKey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             EmailTextFormField(emailController: _emailController),
             PasswordTextFormField(
@@ -101,6 +101,16 @@ class _LoginPageState extends State<LoginPage> {
               errorText: _passwordErrorText,
               onPasswordVisibilityChanged: () => setState(() => _isPasswordVisible = !_isPasswordVisible),
             ),
+            const SizedBox(height: 15),
+            const Text(
+              'Пароль должен содержать не менее 6 символов',
+              style: TextStyle(
+                fontFamily: 'SFUIDisplay',
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                color: AppColors.grey,
+              ),
+            )
           ],
         ),
       );
@@ -110,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
         children: [
           _buildForgotPassword(),
           const SizedBox(height: 26),
-          CustomLoginButton(onTap: () {}, data: 'Войти'),
+          CustomLoginButton(onTap: () {}, data: 'Зарегистрироваться'),
           const SizedBox(height: 26),
           _buildSocialLogin(),
           const SizedBox(height: 38),
@@ -140,7 +150,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget _buildSocialLogin() => Column(
         children: [
           const Text(
-            'Или войти с помощью',
+            'Или зарегестрироваться с помощью',
             style: TextStyle(
               fontFamily: 'SFUIDisplay',
               fontSize: 18,
@@ -154,27 +164,32 @@ class _LoginPageState extends State<LoginPage> {
             splashColor: Colors.transparent,
             highlightColor: Colors.transparent,
             child: Container(
+              width: double.infinity,
               decoration: BoxDecoration(
                 color: Colors.transparent,
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: AppColors.icon),
               ),
               child: const Padding(
-                padding: EdgeInsets.symmetric(vertical: 11.0, horizontal: 21),
+                padding: EdgeInsets.symmetric(vertical: 11.0, horizontal: 11),
                 child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(AppIcons.google, size: 40, color: AppColors.grey),
-                    SizedBox(width: 55),
-                    Text(
-                      'Войти с Google',
-                      style: TextStyle(
-                        fontFamily: 'SFUIDisplay',
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                        color: AppColors.icon,
+                    SizedBox(width: 12),
+                    Expanded(
+                      child: Text(
+                        'Зарегистрироваться с Google',
+                        style: TextStyle(
+                          fontFamily: 'SFUIDisplay',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.icon,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
-                    SizedBox.shrink()
                   ],
                 ),
               ),
@@ -185,7 +200,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _buildSignUpText() => RichText(
         text: TextSpan(
-          text: 'Еще нет аккаунта?',
+          text: 'Уже есть аккаунт?',
           style: const TextStyle(
             fontFamily: 'SFUIDisplay',
             fontSize: 18,
@@ -196,9 +211,9 @@ class _LoginPageState extends State<LoginPage> {
             TextSpan(
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
-                  context.pushNamed(RouteNames.registration);
+                  context.pop();
                 },
-              text: ' Зарегистрироваться',
+              text: ' Войти',
               style: const TextStyle(
                 fontFamily: 'SFUIDisplay',
                 fontSize: 18,
@@ -213,5 +228,5 @@ class _LoginPageState extends State<LoginPage> {
 }
 
 void main() {
-  runApp(const MaterialApp(home: LoginPage()));
+  runApp(const MaterialApp(home: RegistrationPage()));
 }
