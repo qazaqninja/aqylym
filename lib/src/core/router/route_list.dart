@@ -15,12 +15,21 @@ Page getPage({
 
 List<RouteBase> _routes = [
   StatefulShellRoute.indexedStack(
+    redirect: (context, state) {
+      return null;
+    },
     builder: (context, state, navigationShell) {
-      return BottomNavigationPage(child: navigationShell);
+      return BottomNavigationPage(
+        child: navigationShell,
+      );
     },
     branches: [
       StatefulShellBranch(
         routes: [
+          GoRoute(
+            path: '/',
+            redirect: (context, state) => '/main',
+          ),
           GoRoute(
             path: RoutePaths.main,
             pageBuilder: (context, state) => getPage(

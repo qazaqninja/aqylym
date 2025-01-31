@@ -71,33 +71,54 @@ class DiagnosticTestPage extends StatelessWidget {
                   textAlign: TextAlign.left,
                 ),
                 const SizedBox(height: 58),
-                InkWell(
+                CustomButton(
                   onTap: () {
                     context.push(RoutePaths.testQuestion);
                   },
-                  splashColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.mint,
-                      borderRadius: BorderRadius.circular(
-                        63,
-                      ),
-                    ),
-                    padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 25),
-                    child: const Text(
-                      'Пройти диагностический тест',
-                      style: TextStyle(
-                        fontFamily: 'SFUIDisplay',
-                        fontWeight: FontWeight.w400,
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
+                  data: 'Пройти диагностический тест',
                 ),
                 const SizedBox(height: 25),
               ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  final String data;
+  final VoidCallback onTap;
+  const CustomButton({
+    required this.onTap,
+    super.key,
+    required this.data,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      splashColor: Colors.transparent,
+      highlightColor: Colors.transparent,
+      child: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: AppColors.mint,
+          borderRadius: BorderRadius.circular(
+            63,
+          ),
+        ),
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 25),
+        child: Center(
+          child: Text(
+            data,
+            style: const TextStyle(
+              fontFamily: 'SFUIDisplay',
+              fontWeight: FontWeight.w400,
+              fontSize: 18,
+              color: Colors.white,
             ),
           ),
         ),

@@ -26,29 +26,33 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
         onTap: (index) {
           widget.child.goBranch(index);
         },
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(AppIcons.home),
-            label: 'Главная',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(AppIcons.book),
-            label: 'Мои книги',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(AppIcons.jigsaw),
-            label: 'Игры',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(AppIcons.user),
-            label: 'Профиль',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(AppIcons.help),
-            label: 'Чаты',
-          ),
-        ],
+        items: _getNavItems(),
       ),
     );
+  }
+
+  List<BottomNavigationBarItem> _getNavItems() {
+    return [
+      const BottomNavigationBarItem(
+        icon: Icon(AppIcons.home),
+        label: 'Главная',
+      ),
+      const BottomNavigationBarItem(
+        icon: Icon(AppIcons.book),
+        label: 'Мои книги',
+      ),
+      const BottomNavigationBarItem(
+        icon: Icon(AppIcons.jigsaw),
+        label: 'Игры',
+      ),
+      const BottomNavigationBarItem(
+        icon: Icon(AppIcons.user),
+        label: 'Профиль',
+      ),
+      const BottomNavigationBarItem(
+        icon: Icon(AppIcons.help),
+        label: 'Чаты',
+      ),
+    ];
   }
 }

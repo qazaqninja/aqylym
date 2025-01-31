@@ -8,5 +8,5 @@ class RoutePaths {
   static const String main = '/main';
   static const String initial = '/';
   static const String test = '/test';
-  static const String testQuestion = '/est-questions';
+  static const String testQuestion = '/test-questions';
 }
