@@ -67,6 +67,7 @@ class GamesPage extends StatelessWidget {
                       ageRange: '11-13 лет',
                       onPlay: () {},
                     ),
+                    const SizedBox(height: 16),
                   ],
                 ),
               ),

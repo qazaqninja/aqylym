@@ -1,16 +1,36 @@
-import 'package:aqylym/src/core/theme/colors.dart';
-import 'package:aqylym/src/core/theme/theme.dart';
+import 'package:aqylym/src/features/main/main_page.dart';
+import 'package:aqylym/src/features/main/widgets/my_books.dart';
+import 'package:aqylym/src/features/main/widgets/search_bar_widget.dart';
 import 'package:flutter/material.dart';
 
-class BooksPage extends StatelessWidget {
-  const BooksPage({super.key});
+class BooksPage extends StatefulWidget {
+  const BooksPage({
+    super.key,
+  });
 
   @override
+  State<BooksPage> createState() => _BooksPageState();
+}
+
+class _BooksPageState extends State<BooksPage> {
+  final TextEditingController textEditingController = TextEditingController();
+  @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'books',
-        style: FigmaTextstyle.regular24px.copyWith(color: AppColors.blackFont),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SearchBarWidget(textEditingController: textEditingController),
+            const SizedBox(height: 25),
+            const MyBooks(),
+          ],
+        ),
       ),
     );
   }

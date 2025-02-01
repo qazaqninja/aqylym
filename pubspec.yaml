@@ -74,6 +74,7 @@ dependencies:
   json_annotation: ^4.7.0
   jwt_decode: ^0.3.1
   l: ^4.0.2
+  linear_progress_bar: ^1.1.3
   lite_rolling_switch: ^1.0.1
   logger: ^2.5.0
   mime: ^2.0.0
@@ -154,6 +155,8 @@ flutter:
     - assets/images/game3.svg
     - assets/images/1.svg
     - assets/images/star.svg
+    - assets/images/book1.svg
+    - assets/images/book2.svg
 
   fonts:
     - family: app_icons

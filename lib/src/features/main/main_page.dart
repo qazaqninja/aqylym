@@ -1,6 +1,8 @@
-import 'package:aqylym/src/core/theme/app_icons.dart';
 import 'package:aqylym/src/core/theme/colors.dart';
 import 'package:aqylym/src/features/main/widgets/custom_slider.dart';
+import 'package:aqylym/src/features/main/widgets/my_books.dart';
+import 'package:aqylym/src/features/main/widgets/rec_books.dart';
+import 'package:aqylym/src/features/main/widgets/search_bar_widget.dart';
 
 import '../../app/imports.dart';
 
@@ -26,53 +28,62 @@ class _MainPageState extends State<MainPage> {
         top: true,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Column(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: AppColors.whiteFont,
-                  borderRadius: BorderRadius.circular(10.0),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SearchBarWidget(
+                  textEditingController: textEditingController,
                 ),
-                child: TextField(
-                  controller: textEditingController,
-                  style: const TextStyle(
-                    color: Colors.black,
-                  ),
-                  decoration: const InputDecoration(
-                    suffixIcon: Icon(
-                      AppIcons.search,
-                      color: AppColors.mint,
-                      size: 24,
+                const SizedBox(height: 25),
+                const Row(
+                  children: [
+                    Column(
+                      children: [
+                        CustomSlider(
+                          activeTrackColor: AppColors.puzzleColor,
+                          iconSize: 40,
+                          iconData: Icons.extension,
+                          iconColor: AppColors.puzzleColor,
+                        ),
+                        Text(
+                          'Прохождение игр',
+                          style: TextStyle(
+                            fontFamily: 'SFUIDisplay',
+                            fontSize: 9,
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.grey,
+                          ),
+                        ),
+                      ],
                     ),
-                    hintText: 'Название книги или автора',
-                    hintStyle: TextStyle(
-                      fontFamily: 'SFUIDisplay',
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.grey,
+                    Column(
+                      children: [
+                        CustomSlider(
+                          activeTrackColor: AppColors.starColor,
+                          iconSize: 40,
+                          iconData: Icons.star,
+                          iconColor: AppColors.starColor,
+                        ),
+                        Text(
+                          'Правильное выполнение',
+                          style: TextStyle(
+                            fontFamily: 'SFUIDisplay',
+                            fontSize: 9,
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.grey,
+                          ),
+                        ),
+                      ],
                     ),
-                    border: InputBorder.none,
-                    contentPadding: EdgeInsets.symmetric(vertical: 9.0, horizontal: 7),
-                  ),
+                  ],
                 ),
-              ),
-              const Row(
-                children: [
-                  CustomSlider(
-                    activeTrackColor: AppColors.starColor,
-                    iconSize: 40,
-                    iconData: Icons.star,
-                    iconColor: AppColors.starColor,
-                  ),
-                  CustomSlider(
-                    activeTrackColor: AppColors.puzzleColor,
-                    iconSize: 40,
-                    iconData: Icons.extension,
-                    iconColor: AppColors.puzzleColor,
-                  ),
-                ],
-              ),
-            ],
+                const SizedBox(height: 16),
+                const MyBooks(),
+                const SizedBox(height: 16),
+                const RecBooks(),
+              ],
+            ),
           ),
         ),
       ),

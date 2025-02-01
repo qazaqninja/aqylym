@@ -22,4 +22,5 @@ class AppColors {
   static const starColor = Color(0xffFFB236);
   static const inactiveSliderColor = Color(0xffACB8CF);
   static const puzzleColor = Color(0xff7E007E);
+  static const progressBack = Color(0xffC4C4C4);
 }
