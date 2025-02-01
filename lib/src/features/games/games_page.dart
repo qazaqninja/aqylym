@@ -2,6 +2,7 @@ import 'package:aqylym/src/app/imports.dart';
 import 'package:aqylym/src/core/theme/app_icons.dart';
 import 'package:aqylym/src/core/theme/colors.dart';
 import 'package:aqylym/src/core/theme/theme.dart';
+import 'package:aqylym/src/features/games/widgets/game_card.dart';
 
 class GamesPage extends StatelessWidget {
   const GamesPage({super.key});
@@ -33,6 +34,42 @@ class GamesPage extends StatelessWidget {
             Text(
               'Игры для развития',
               style: FigmaTextstyle.medium24px.copyWith(color: AppColors.blackFont),
+            ),
+            const SizedBox(height: 25),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    const SizedBox(height: 16),
+                    GameCard(
+                      image: 'assets/images/game1.svg',
+                      title: 'Логическая цепочка',
+                      ability: 'логика',
+                      description: 'Установите закономерность верхних карточек, выбрав один из варианто нижнего ряда.',
+                      ageRange: '4-6 лет',
+                      onPlay: () {},
+                    ),
+                    const SizedBox(height: 16),
+                    GameCard(
+                      image: 'assets/images/game2.svg',
+                      title: 'Ошибки художника',
+                      ability: 'внимание',
+                      description: 'Посмотри на картинки и определи,какие из них нарисованы неправильно.',
+                      ageRange: '5-10 лет',
+                      onPlay: () {},
+                    ),
+                    const SizedBox(height: 16),
+                    GameCard(
+                      image: 'assets/images/game3.svg',
+                      title: 'Птички',
+                      ability: 'скорость',
+                      description: 'Задача задана постоянный позволяет сложившаяся особенностипоставленных.',
+                      ageRange: '11-13 лет',
+                      onPlay: () {},
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),

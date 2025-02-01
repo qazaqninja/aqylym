@@ -147,7 +147,10 @@ flutter:
     - assets/images/intro1.jpg
     - assets/images/intro2.jpg
     - assets/images/intro3.jpg
-    - assets/images/intro4.jpg
+    - assets/images/intro4.jpg 
+    - assets/images/game1.svg
+    - assets/images/game2.svg
+    - assets/images/game3.svg
 
   fonts:
     - family: app_icons
