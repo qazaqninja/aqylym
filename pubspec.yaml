@@ -55,6 +55,7 @@ dependencies:
   flutter_svg: ^2.0.5
   flutter_switch: ^0.3.2
   fluttericon: ^2.0.0
+  font_awesome_flutter: ^10.8.0
   fpdart: ^1.1.0
   freezed_annotation: ^2.2.0
   gauge_indicator: ^0.4.3
@@ -147,16 +148,18 @@ flutter:
     - assets/images/intro1.jpg
     - assets/images/intro2.jpg
     - assets/images/intro3.jpg
-    - assets/images/intro4.jpg 
+    - assets/images/intro4.jpg
     - assets/images/game1.svg
     - assets/images/game2.svg
     - assets/images/game3.svg
+    - assets/images/1.svg
+    - assets/images/star.svg
 
   fonts:
     - family: app_icons
       fonts:
         - asset: assets/icons/app_icons.ttf
-        
+
     - family: SFUIDisplay
       fonts:
         - asset: assets/fonts/sf-ui-display-black.otf

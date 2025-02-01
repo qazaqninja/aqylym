@@ -19,4 +19,7 @@ class AppColors {
   static const dividerColor = Color(0xffE6E6E6);
   static const switchColor = Color(0xff8D8D8D);
   static const questionColor = Color(0xff3E3E3E);
+  static const starColor = Color(0xffFFB236);
+  static const inactiveSliderColor = Color(0xffACB8CF);
+  static const puzzleColor = Color(0xff7E007E);
 }

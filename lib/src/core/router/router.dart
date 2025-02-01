@@ -24,7 +24,7 @@ GoRouter routerProvider() {
 
   return GoRouter(
     refreshListenable: st,
-    initialLocation: RoutePaths.games,
+    initialLocation: RoutePaths.main,
     debugLogDiagnostics: true,
     routes: _routes,
   );

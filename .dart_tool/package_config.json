@@ -722,6 +722,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "font_awesome_flutter",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/font_awesome_flutter-10.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "fpdart",
       "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/fpdart-1.1.1",
       "packageUri": "lib/",
@@ -1850,7 +1856,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2025-02-01T10:46:47.206437Z",
+  "generated": "2025-02-01T12:25:59.168225Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///Users/yerassyltynymbay/Development/flutter",
