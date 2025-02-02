@@ -1,4 +1,5 @@
 import 'package:aqylym/src/core/services/storage/storage_service_impl.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import 'src/app/application.dart';
 import 'src/app/imports.dart';
@@ -6,31 +7,36 @@ import 'src/core/services/injectable/injectable_service.dart';
 
 final StorageServiceImpl storageService = StorageServiceImpl();
 void main() async {
-  // Widget tree binding
-  await storageService.init();
+  try {
+    // Ensure Flutter is initialized
+    WidgetsFlutterBinding.ensureInitialized();
 
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+    // Initialize storage service
+    await storageService.init();
+    WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
 
-  // Prevent native splash screen from disappearing
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+    // Initialize Firebase with options
+    await Firebase.initializeApp();
 
-  // Set status bar theme
-  UIHelpers.statusBarTheme();
+    // Rest of your code
+    FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+    UIHelpers.statusBarTheme();
+    await configureDependencies();
 
-  // Initialize dependencies
-  await configureDependencies();
-
-  // Prevent landscape mode
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then(
-    (_) {
-      runApp(
-        // Riverpod ProviderScope for state management
-        const ProviderScope(
-          child: MainApp(
-            flavor: AppFlavor.production,
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then(
+      (_) {
+        runApp(
+          const ProviderScope(
+            child: MainApp(
+              flavor: AppFlavor.production,
+            ),
           ),
-        ),
-      );
-    },
-  );
+        );
+      },
+    );
+  } catch (e, stackTrace) {
+    print('Initialization error: $e');
+    print('Stack trace: $stackTrace');
+    rethrow;
+  }
 }

@@ -12,4 +12,5 @@ class RoutePaths {
   static const String login = '/login';
   static const String registration = '/login/registration';
   static const String onboarding = '/onboarding';
+  static const String bottomNavigation = '/bottomNavigation';
 }

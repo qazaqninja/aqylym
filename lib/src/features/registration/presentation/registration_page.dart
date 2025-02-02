@@ -3,9 +3,11 @@ import 'package:aqylym/src/core/router/router.dart';
 import 'package:aqylym/src/core/theme/app_icons.dart';
 import 'package:aqylym/src/core/theme/colors.dart';
 import 'package:aqylym/src/core/theme/theme.dart';
+import 'package:aqylym/src/features/login/data/auth.dart';
 import 'package:aqylym/src/features/login/presentation/components/email_text_form_field.dart';
 import 'package:aqylym/src/features/login/presentation/components/password_text_form_field.dart';
 import 'package:aqylym/src/features/test/diagnostic_test_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 
 class RegistrationPage extends StatefulWidget {
@@ -18,9 +20,51 @@ class RegistrationPage extends StatefulWidget {
 class _RegistrationPageState extends State<RegistrationPage> {
   bool _isPasswordVisible = false;
   final _formKey = GlobalKey<FormState>();
+  final _auth = Auth();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final String _passwordErrorText = 'Пожалуйста, введите пароль';
+  bool _isLoading = false;
+
+  Future<void> _handleSignUp() async {
+    if (!_formKey.currentState!.validate()) return;
+
+    setState(() => _isLoading = true);
+
+    try {
+      await _auth.createUserWithEmailAndPassword(
+        email: _emailController.text,
+        password: _passwordController.text,
+      );
+      if (mounted) {
+        context.go(RoutePaths.main);
+      }
+    } on FirebaseAuthException catch (e) {
+      if (mounted) {
+        String message = 'An error occurred';
+
+        switch (e.code) {
+          case 'email-already-in-use':
+            message = 'This email is already registered.';
+            break;
+          case 'weak-password':
+            message = 'The password is too weak.';
+            break;
+          case 'invalid-email':
+            message = 'Invalid email address.';
+            break;
+        }
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(message), backgroundColor: Colors.red),
+        );
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isLoading = false);
+      }
+    }
+  }
 
   @override
   void dispose() {
@@ -121,7 +165,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
         children: [
           _buildForgotPassword(),
           const SizedBox(height: 26),
-          CustomLoginButton(onTap: () {}, data: 'Зарегистрироваться'),
+          CustomLoginButton(onTap: _handleSignUp, data: 'Зарегистрироваться'),
           const SizedBox(height: 26),
           _buildSocialLogin(),
           const SizedBox(height: 38),

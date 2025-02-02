@@ -3,9 +3,11 @@ import 'package:aqylym/src/core/router/router.dart';
 import 'package:aqylym/src/core/theme/app_icons.dart';
 import 'package:aqylym/src/core/theme/colors.dart';
 import 'package:aqylym/src/core/theme/theme.dart';
+import 'package:aqylym/src/features/login/data/auth.dart';
 import 'package:aqylym/src/features/login/presentation/components/email_text_form_field.dart';
 import 'package:aqylym/src/features/login/presentation/components/password_text_form_field.dart';
 import 'package:aqylym/src/features/test/diagnostic_test_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 
 class LoginPage extends StatefulWidget {
@@ -17,10 +19,67 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool _isPasswordVisible = false;
+  final _auth = Auth();
+
+  final User? user = Auth().currentUser;
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final String _passwordErrorText = 'Пожалуйста, введите пароль';
+  String? errorMessage = '';
+  bool _isLoading = false;
+  Future<void> _handleSignIn() async {
+    if (!_formKey.currentState!.validate()) return;
+
+    setState(() => _isLoading = true);
+
+    try {
+      await _auth.signImWithEmailAndPassword(
+        email: _emailController.text,
+        password: _passwordController.text,
+      );
+      if (mounted) {
+        context.go(RoutePaths.main);
+      }
+    } on FirebaseAuthException catch (e) {
+      if (mounted) {
+        String message = 'An error occurred';
+
+        switch (e.code) {
+          case 'user-not-found':
+            message = 'No user found with this email.';
+            break;
+          case 'wrong-password':
+            message = 'Wrong password provided.';
+            break;
+          case 'invalid-email':
+            message = 'Invalid email address.';
+            break;
+        }
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(message), backgroundColor: Colors.red),
+        );
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isLoading = false);
+      }
+    }
+  }
+
+  Future<void> createUserWithEmailAndPassword() async {
+    try {
+      await Auth().createUserWithEmailAndPassword(
+        email: _emailController.text,
+        password: _passwordController.text,
+      );
+    } on FirebaseAuthException catch (e) {
+      setState(() {
+        errorMessage = e.message;
+      });
+    }
+  }
 
   @override
   void dispose() {
@@ -110,7 +169,7 @@ class _LoginPageState extends State<LoginPage> {
         children: [
           _buildForgotPassword(),
           const SizedBox(height: 26),
-          CustomLoginButton(onTap: () {}, data: 'Войти'),
+          CustomLoginButton(onTap: _handleSignIn, data: 'Войти'),
           const SizedBox(height: 26),
           _buildSocialLogin(),
           const SizedBox(height: 38),

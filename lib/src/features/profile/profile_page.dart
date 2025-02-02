@@ -3,6 +3,7 @@ import 'package:aqylym/src/core/router/router.dart';
 import 'package:aqylym/src/core/theme/app_icons.dart';
 import 'package:aqylym/src/core/theme/colors.dart';
 import 'package:aqylym/src/core/utils/constants/profile_constants.dart';
+import 'package:aqylym/src/features/login/presentation/components/sign_out_button.dart';
 import 'package:aqylym/src/features/profile/widgets/custom_switch.dart';
 import 'package:aqylym/src/features/profile/widgets/profile_header.dart';
 import 'package:aqylym/src/features/profile/widgets/profile_section_widget.dart';
@@ -114,6 +115,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 initials: 'AK',
                 name: 'Алуа Климова',
               ),
+              const SignOutButton(),
               const SizedBox(height: 41),
               ...List.generate(
                 _sections.length,

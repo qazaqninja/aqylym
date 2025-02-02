@@ -8,6 +8,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "_flutterfire_internals",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/_flutterfire_internals-1.3.50",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
       "name": "analyzer",
       "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/analyzer-5.13.0",
       "packageUri": "lib/",
@@ -24,6 +30,12 @@
       "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/ansicolor-2.0.3",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "ar_flutter_plugin_flutterflow",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/ar_flutter_plugin_flutterflow-0.7.55",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
     },
     {
       "name": "archive",
@@ -290,6 +302,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "dart_earcut",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/dart_earcut-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "dart_style",
       "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/dart_style-2.3.2",
       "packageUri": "lib/",
@@ -438,6 +456,42 @@
       "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/file_selector_windows-0.9.3+3",
       "packageUri": "lib/",
       "languageVersion": "3.3"
+    },
+    {
+      "name": "firebase_auth",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/firebase_auth-5.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "firebase_auth_platform_interface",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/firebase_auth_platform_interface-7.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "firebase_auth_web",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/firebase_auth_web-5.13.7",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "firebase_core",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/firebase_core-3.10.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "firebase_core_platform_interface",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/firebase_core_platform_interface-5.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "firebase_core_web",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/firebase_core_web-2.19.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
     },
     {
       "name": "fixnum",
@@ -603,9 +657,9 @@
     },
     {
       "name": "flutter_map",
-      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/flutter_map-3.1.0",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/flutter_map-7.0.2",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.0"
     },
     {
       "name": "flutter_markdown",
@@ -758,6 +812,42 @@
       "languageVersion": "2.16"
     },
     {
+      "name": "geolocator",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/geolocator-12.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "geolocator_android",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/geolocator_android-4.6.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "geolocator_apple",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.8+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "geolocator_platform_interface",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/geolocator_platform_interface-4.2.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "geolocator_web",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/geolocator_web-4.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "geolocator_windows",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/geolocator_windows-0.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "get_it",
       "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/get_it-7.7.0",
       "packageUri": "lib/",
@@ -795,7 +885,7 @@
     },
     {
       "name": "google_fonts",
-      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/google_fonts-4.0.4",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/google_fonts-4.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -831,9 +921,9 @@
     },
     {
       "name": "http",
-      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/http-0.13.6",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/http-1.3.0",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.4"
     },
     {
       "name": "http_multi_server",
@@ -981,9 +1071,9 @@
     },
     {
       "name": "latlong2",
-      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/latlong2-0.8.2",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/latlong2-0.9.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "leak_tracker",
@@ -1203,31 +1293,37 @@
     },
     {
       "name": "permission_handler",
-      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/permission_handler-10.4.5",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/permission_handler-11.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
     {
       "name": "permission_handler_android",
-      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/permission_handler_android-10.3.6",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/permission_handler_android-12.0.13",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
     {
       "name": "permission_handler_apple",
-      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/permission_handler_apple-9.1.4",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
     {
+      "name": "permission_handler_html",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/permission_handler_html-0.1.3+5",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
       "name": "permission_handler_platform_interface",
-      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/permission_handler_platform_interface-3.12.0",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/permission_handler_platform_interface-4.2.3",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "permission_handler_windows",
-      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/permission_handler_windows-0.1.3",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/permission_handler_windows-0.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -1272,12 +1368,6 @@
       "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/popover-0.3.1",
       "packageUri": "lib/",
       "languageVersion": "3.5"
-    },
-    {
-      "name": "positioned_tap_detector_2",
-      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/positioned_tap_detector_2-1.0.4",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
     },
     {
       "name": "proj4dart",
@@ -1380,6 +1470,12 @@
       "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/rxdart-0.27.7",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "sabowsla_core_platform_interface",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/sabowsla_core_platform_interface-0.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
     },
     {
       "name": "scroll_pos",
@@ -1676,12 +1772,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "tuple",
-      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/tuple-2.0.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
       "name": "typed_data",
       "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/typed_data-1.4.0",
       "packageUri": "lib/",
@@ -1862,7 +1952,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2025-02-01T13:18:00.103483Z",
+  "generated": "2025-02-02T09:30:03.677892Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///Users/yerassyltynymbay/Development/flutter",
