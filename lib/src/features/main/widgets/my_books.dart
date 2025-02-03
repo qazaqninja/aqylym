@@ -1,4 +1,5 @@
 import 'package:aqylym/src/app/imports.dart';
+import 'package:aqylym/src/core/router/router.dart';
 import 'package:aqylym/src/core/theme/colors.dart';
 import 'package:aqylym/src/features/main/widgets/book_card.dart';
 
@@ -34,7 +35,9 @@ class MyBooks extends StatelessWidget {
                 image: 'assets/images/book1.svg',
                 title: 'Сказка',
                 description: 'Белка',
-                onPlay: () {},
+                onPlay: () {
+                  context.push(RoutePaths.bookDetail);
+                },
               );
             },
           ),

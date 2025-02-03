@@ -26,6 +26,47 @@ class _RegistrationPageState extends State<RegistrationPage> {
   final String _passwordErrorText = 'Пожалуйста, введите пароль';
   bool _isLoading = false;
 
+  Future<void> _handleGoogleSignIn() async {
+    setState(() => _isLoading = true);
+
+    try {
+      await _auth.signInWithGoogle();
+      if (mounted) {
+        context.go(RoutePaths.main);
+      }
+    } on FirebaseAuthException catch (e) {
+      if (mounted) {
+        String message = 'An error occurred during Google sign in';
+
+        switch (e.code) {
+          case 'account-exists-with-different-credential':
+            message = 'An account already exists with this email.';
+            break;
+          case 'invalid-credential':
+            message = 'Invalid credentials.';
+            break;
+          case 'operation-not-allowed':
+            message = 'Google sign in is not enabled.';
+            break;
+          case 'user-disabled':
+            message = 'This user account has been disabled.';
+            break;
+          case 'user-not-found':
+            message = 'No user found for this email.';
+            break;
+        }
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(message), backgroundColor: Colors.red),
+        );
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isLoading = false);
+      }
+    }
+  }
+
   Future<void> _handleSignUp() async {
     if (!_formKey.currentState!.validate()) return;
 
@@ -205,9 +246,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
           ),
           const SizedBox(height: 38),
           InkWell(
-            onTap: () {},
             splashColor: Colors.transparent,
             highlightColor: Colors.transparent,
+            onTap: _handleGoogleSignIn,
             child: Container(
               width: double.infinity,
               decoration: BoxDecoration(

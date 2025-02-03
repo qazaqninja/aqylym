@@ -108,6 +108,13 @@ List<RouteBase> _routes = [
     ),
   ),
   GoRoute(
+    path: RoutePaths.bookDetail,
+    pageBuilder: (context, state) => getPage(
+      child: const BooksDetailPage(),
+      state: state,
+    ),
+  ),
+  GoRoute(
     name: RouteNames.login,
     path: RoutePaths.login,
     builder: (context, GoRouterState state) {

@@ -30,4 +30,16 @@ class Auth {
   Future<void> signOut() async {
     await _firebaseAuth.signOut();
   }
+
+  Future<UserCredential> signInWithGoogle() async {
+    // Create a new provider
+    GoogleAuthProvider googleProvider = GoogleAuthProvider();
+
+    try {
+      final UserCredential userCredential = await FirebaseAuth.instance.signInWithPopup(googleProvider);
+      return userCredential;
+    } catch (e) {
+      rethrow;
+    }
+  }
 }
