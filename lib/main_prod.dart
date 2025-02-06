@@ -1,5 +1,6 @@
 import 'package:aqylym/src/core/services/storage/storage_service_impl.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'src/app/application.dart';
 import 'src/app/imports.dart';
@@ -7,6 +8,7 @@ import 'src/core/services/injectable/injectable_service.dart';
 
 final StorageServiceImpl storageService = StorageServiceImpl();
 void main() async {
+  await dotenv.load(fileName: 'lib/.env');
   try {
     // Ensure Flutter is initialized
     WidgetsFlutterBinding.ensureInitialized();

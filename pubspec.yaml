@@ -40,7 +40,7 @@ dependencies:
   flutter_chat_core: ^0.0.4
   flutter_chat_types: ^3.6.2
   flutter_chat_ui: ^1.6.15
-  flutter_dotenv: ^5.0.2
+  flutter_dotenv: ^5.2.1
   flutter_flavorizr: ^2.1.5
   flutter_gen: ^5.1.0+1
   flutter_launcher_icons: ^0.13.0
@@ -161,6 +161,7 @@ flutter:
     - assets/images/star.svg
     - assets/images/book1.svg
     - assets/images/book2.svg
+    - lib/.env
 
   fonts:
     - family: app_icons

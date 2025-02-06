@@ -1,4 +1,3 @@
-import 'package:aqylym/src/features/main/main_page.dart';
 import 'package:aqylym/src/features/main/widgets/my_books.dart';
 import 'package:aqylym/src/features/main/widgets/search_bar_widget.dart';
 import 'package:flutter/material.dart';
