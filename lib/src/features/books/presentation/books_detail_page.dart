@@ -1,7 +1,10 @@
 import 'package:aqylym/src/app/imports.dart';
+import 'package:aqylym/src/core/base/base_bloc/bloc/base_bloc_widget.dart';
+import 'package:aqylym/src/core/services/injectable/injectable_service.dart';
 import 'package:aqylym/src/core/theme/app_icons.dart';
 import 'package:aqylym/src/core/theme/colors.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:aqylym/src/features/books/domain/requests/get_text_request.dart';
+import 'package:aqylym/src/features/books/presentation/bloc/book_bloc.dart';
 
 class BooksDetailPage extends StatefulWidget {
   const BooksDetailPage({super.key});
@@ -12,6 +15,8 @@ class BooksDetailPage extends StatefulWidget {
 
 class _BooksDetailPageState extends State<BooksDetailPage> {
   late ScrollController _scrollController;
+  final text =
+      "Хорошим помощником белки Бэлы оказался соловей. Каким образом он смог стать полезным белке?  Сказка на ночь расскажет нам об этом…";
   double _iconScale = 1.0;
 
   @override
@@ -94,8 +99,35 @@ class _BooksDetailPageState extends State<BooksDetailPage> {
               },
               body: Container(
                 color: Colors.amber,
-                child: Center(
-                  child: Text('${dotenv.env['OPENAI_API_KEY']}'),
+                child: BaseBlocWidget<BookBloc, BookEvent, BookState>(
+                  bloc: getIt<BookBloc>(),
+                  starterEvent: BookEvent.getText(
+                    GetTextRequest(
+                      temperature: 0.3,
+                      messages: [
+                        {
+                          'role': 'system',
+                          'content':
+                              'You are a helpful assistant that splits words into syllables. Respond only with the syllables separated by hyphens.',
+                        },
+                        {
+                          'role': 'user',
+                          'content': 'Split this sentence into syllables: $text',
+                        }
+                      ],
+                    ),
+                  ),
+                  builder: (context, state, bloc) {
+                    return state.maybeWhen(
+                      error: (error) => Text(error),
+                      orElse: () => const CircularProgressIndicator(),
+                      loaded: (viewModel) {
+                        return Center(
+                          child: Text(viewModel.text!.choices.first.message.content),
+                        );
+                      },
+                    );
+                  },
                 ),
               ),
             ),
@@ -127,11 +159,4 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
   bool shouldRebuild(_SliverAppBarDelegate oldDelegate) {
     return false;
   }
-}
-
-void main() async {
-  await dotenv.load(fileName: "lib/.env");
-  runApp(const MaterialApp(
-    home: BooksDetailPage(),
-  ));
 }

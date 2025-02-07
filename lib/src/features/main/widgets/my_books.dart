@@ -30,14 +30,16 @@ class MyBooks extends StatelessWidget {
             itemCount: 5,
             separatorBuilder: (context, index) => const SizedBox(width: 18),
             itemBuilder: (context, index) {
-              return BookCard(
-                isRec: false,
-                image: 'assets/images/book1.svg',
-                title: 'Сказка',
-                description: 'Белка',
-                onPlay: () {
+              return InkWell(
+                onTap: () {
                   context.push(RoutePaths.bookDetail);
                 },
+                child: const BookCard(
+                  isRec: false,
+                  image: 'assets/images/book1.svg',
+                  title: 'Сказка',
+                  description: 'Белка',
+                ),
               );
             },
           ),

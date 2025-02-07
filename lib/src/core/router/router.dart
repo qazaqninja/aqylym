@@ -1,5 +1,5 @@
-import 'package:aqylym/src/features/books/books_detail_page.dart';
-import 'package:aqylym/src/features/books/books_page.dart';
+import 'package:aqylym/src/features/books/presentation/books_detail_page.dart';
+import 'package:aqylym/src/features/books/presentation/books_page.dart';
 import 'package:aqylym/src/features/bottom_navigation/bottom_navigation_page.dart';
 import 'package:aqylym/src/features/games/games_page.dart';
 import 'package:aqylym/src/features/help/help_page.dart';

@@ -29,12 +29,11 @@ class RecBooks extends StatelessWidget {
             itemCount: 5,
             separatorBuilder: (context, index) => const SizedBox(width: 18),
             itemBuilder: (context, index) {
-              return BookCard(
+              return const BookCard(
                 isRec: true,
                 image: 'assets/images/book1.svg',
                 title: 'Сказка',
                 description: 'Белка',
-                onPlay: () {},
               );
             },
           ),

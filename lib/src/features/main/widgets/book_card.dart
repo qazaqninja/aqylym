@@ -13,14 +13,12 @@ class BookCard extends StatelessWidget {
   final String image;
   final String title;
   final String description;
-  final VoidCallback onPlay;
 
   const BookCard({
     super.key,
     required this.image,
     required this.title,
     required this.description,
-    required this.onPlay,
     required this.isRec,
   });
 
