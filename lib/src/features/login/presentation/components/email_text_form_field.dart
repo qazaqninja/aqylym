@@ -1,3 +1,4 @@
+import 'package:aqylym/src/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -34,38 +35,40 @@ class EmailTextFormField extends StatelessWidget {
         },
         cursorHeight: 24,
         style: const TextStyle(
-          fontFamily: 'Inter',
+          fontFamily: 'SFUIDisplay',
           fontSize: 16,
           fontWeight: FontWeight.w400,
-          color: Color(0xFF1E293B),
+          color: AppColors.icon,
         ),
-        cursorColor: const Color(0xFF2CB1B9),
+        cursorColor: AppColors.mint,
         decoration: InputDecoration(
           labelText: 'Почта',
           labelStyle: const TextStyle(
-            fontFamily: 'Inter',
-            fontSize: 16,
+            fontFamily: 'SFUIDisplay',
+            fontSize: 20,
             fontWeight: FontWeight.w400,
-            color: Color(0xFF64748B),
+            color: AppColors.greySignInInput,
           ),
           errorStyle: const TextStyle(
-            fontFamily: 'Inter',
-            fontSize: 16,
+            fontFamily: 'SFUIDisplay',
+            fontSize: 20,
             fontWeight: FontWeight.w400,
             color: Colors.red,
           ),
           floatingLabelBehavior: FloatingLabelBehavior.auto,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(10),
             borderSide: const BorderSide(color: Color(0xFFE2E8F0)),
           ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(10),
             borderSide: const BorderSide(color: Color(0xFFE2E8F0)),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(color: Color(0xFF2CB1B9)),
+            borderRadius: BorderRadius.circular(10),
+            borderSide: const BorderSide(
+              color: AppColors.mint,
+            ),
           ),
           errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),

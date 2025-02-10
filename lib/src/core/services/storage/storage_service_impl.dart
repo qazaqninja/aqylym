@@ -1,7 +1,9 @@
 import 'dart:developer';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'storage_service.dart';
 
@@ -18,11 +20,13 @@ class StorageServiceImpl extends ChangeNotifier implements StorageService {
   static const String _tokenKey = 'TOKEN';
   static const String _refreshTokenKey = 'REFRESH_TOKEN';
   static const String _languageCode = 'LANGUAGE_CODE';
+  static const String _onboardingKey = 'onboarding_complete';
 
   // Device-related keys
   static const String _clientIdKey = 'CLIENT_ID';
 
   Box? _authBox;
+  late SharedPreferences _prefs;
   Box? _deviceBox;
 
   bool get isInitialized => _authBox != null && _deviceBox != null;

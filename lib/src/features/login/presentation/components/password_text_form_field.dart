@@ -1,7 +1,9 @@
+import 'package:aqylym/src/core/theme/app_icons.dart';
+import 'package:aqylym/src/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class PasswordTextFormField extends StatefulWidget {
-  PasswordTextFormField({
+  const PasswordTextFormField({
     super.key,
     required this.passwordController,
     required this.isPasswordVisible,
@@ -39,50 +41,46 @@ class _PasswordTextFormFieldState extends State<PasswordTextFormField> {
         },
         cursorHeight: 24,
         style: const TextStyle(
-          fontFamily: 'Inter',
+          fontFamily: 'SFUIDisplay',
           fontSize: 16,
           fontWeight: FontWeight.w400,
-          color: Colors.black,
+          color: AppColors.icon,
         ),
         obscureText: !widget.isPasswordVisible,
         obscuringCharacter: '•',
-        cursorColor: const Color(0xFF2CB1B9),
+        cursorColor: AppColors.mint,
         decoration: InputDecoration(
           errorStyle: const TextStyle(
-            fontFamily: 'Inter',
-            fontSize: 16,
+            fontFamily: 'SFUIDisplay',
+            fontSize: 20,
             fontWeight: FontWeight.w400,
             color: Colors.red,
           ),
           labelText: widget.confirm! ? 'Повторите пароль' : 'Пароль',
           labelStyle: const TextStyle(
-            fontFamily: 'Inter',
-            fontSize: 16,
+            fontFamily: 'SFUIDisplay',
+            fontSize: 20,
             fontWeight: FontWeight.w400,
-            color: Color(0xFF64748B),
+            color: AppColors.greySignInInput,
           ),
           floatingLabelBehavior: FloatingLabelBehavior.auto,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(color: Color(0xFFE2E8F0)),
-          ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(10),
             borderSide: const BorderSide(color: Color(0xFFE2E8F0)),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(color: Color(0xFF2CB1B9)),
+            borderRadius: BorderRadius.circular(10),
+            borderSide: const BorderSide(
+              color: AppColors.mint,
+            ),
           ),
           errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(10),
             borderSide: const BorderSide(color: Colors.red),
           ),
           suffixIcon: IconButton(
             icon: Icon(
-              widget.isPasswordVisible
-                  ? Icons.visibility_off
-                  : Icons.visibility,
+              widget.isPasswordVisible ? AppIcons.eye_crossed : AppIcons.eye,
               color: const Color(0xFF64748B),
             ),
             onPressed: () {

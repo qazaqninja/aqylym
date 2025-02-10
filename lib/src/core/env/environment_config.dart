@@ -3,6 +3,5 @@
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class EnvironmentConfig {
-  static String MODE = dotenv.get('MODE');
-  static String API_HOST = dotenv.get('API_HOST');
+  static String get OPENAI_API_KEY => dotenv.env['OPENAI_API_KEY'] ?? '';
 }

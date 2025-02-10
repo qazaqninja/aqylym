@@ -6,10 +6,8 @@ part 'context_activity_bloc.freezed.dart';
 part 'context_activity_event.dart';
 part 'context_activity_state.dart';
 
-class ContextActivityBloc
-    extends Bloc<ContextActivityEvent, ContextActivityState> {
-  ContextActivityBloc()
-      : super(const ContextActivityState.handleActionWithContext(null)) {
+class ContextActivityBloc extends Bloc<ContextActivityEvent, ContextActivityState> {
+  ContextActivityBloc() : super(const ContextActivityState.handleActionWithContext(null)) {
     on<HandleContextActivityEvent>(
       (HandleContextActivityEvent event, Emitter<ContextActivityState> emit) =>
           emit(ContextActivityState.handleActionWithContext(event.callback)),

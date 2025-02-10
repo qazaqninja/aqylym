@@ -81,3 +81,18 @@ final textTheme = TextTheme(
     letterSpacing: 0.4,
   ),
 );
+
+class FigmaTextstyle {
+  static const medium24px =
+      TextStyle(fontWeight: FontWeight.w500, fontFamily: "SFUIDisplay", fontStyle: FontStyle.normal, fontSize: 24.0);
+  static const regular24px =
+      TextStyle(fontWeight: FontWeight.w400, fontFamily: "SFUIDisplay", fontStyle: FontStyle.normal, fontSize: 24.0);
+  static const regular20px =
+      TextStyle(fontWeight: FontWeight.w400, fontFamily: "SFUIDisplay", fontStyle: FontStyle.normal, fontSize: 20.0);
+  static const medium20px =
+      TextStyle(fontWeight: FontWeight.w400, fontFamily: "SFUIDisplay", fontStyle: FontStyle.normal, fontSize: 20.0);
+  static const bodyRegular20px =
+      TextStyle(fontWeight: FontWeight.w400, fontFamily: "SFUIDisplay", fontStyle: FontStyle.normal, fontSize: 20.0);
+  static const menu =
+      TextStyle(fontWeight: FontWeight.w400, fontFamily: "SFUIDisplay", fontStyle: FontStyle.normal, fontSize: 12.0);
+}

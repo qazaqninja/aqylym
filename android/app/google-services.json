@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "545677694943",
+    "project_id": "aqylym-193d8",
+    "storage_bucket": "aqylym-193d8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545677694943:android:4451edc5e84291a614966a",
+        "android_client_info": {
+          "package_name": "kz.cleverest.app_template"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVhceLN-yMSkD2ZT5uzrZ47VwH8Ilj4Yk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

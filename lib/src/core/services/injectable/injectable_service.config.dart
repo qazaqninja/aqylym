@@ -11,6 +11,15 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
+import '../../../features/books/data/datasources/remote/book_remote_impl.dart'
+    as _i5;
+import '../../../features/books/data/datasources/remote/i_book_remote.dart'
+    as _i4;
+import '../../../features/books/data/repositories/book_repository_impl.dart'
+    as _i7;
+import '../../../features/books/domain/repositories/i_book_repository.dart'
+    as _i6;
+import '../../../features/books/domain/usecases/get_text_use_case.dart' as _i8;
 import '../../api/client/rest/dio/dio_client.dart' as _i3;
 
 extension GetItInjectableX on _i1.GetIt {
@@ -31,6 +40,17 @@ extension GetItInjectableX on _i1.GetIt {
       },
       preResolve: true,
     );
+    gh.lazySingleton<_i4.IBookRemote>(
+      () => _i5.BookRemoteImpl(gh<_i3.DioRestClient>()),
+      instanceName: 'BookRemoteImpl',
+    );
+    gh.lazySingleton<_i6.IBookRepository>(
+      () => _i7.BookRepositoryImpl(
+          gh<_i4.IBookRemote>(instanceName: 'BookRemoteImpl')),
+      instanceName: 'BookRepositoryImpl',
+    );
+    gh.lazySingleton<_i8.GetTextUseCase>(() => _i8.GetTextUseCase(
+        gh<_i6.IBookRepository>(instanceName: 'BookRepositoryImpl')));
     return this;
   }
 }
