@@ -22,13 +22,19 @@ class _BooksPageState extends State<BooksPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SearchBarWidget(textEditingController: textEditingController),
-            const SizedBox(height: 25),
-            const MyBooks(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SearchBarWidget(textEditingController: textEditingController),
+              const SizedBox(height: 25),
+              const MyBooks(),
+              const MyBooks(),
+              const MyBooks(),
+              const MyBooks(),
+              const MyBooks(),
+            ],
+          ),
         ),
       ),
     );

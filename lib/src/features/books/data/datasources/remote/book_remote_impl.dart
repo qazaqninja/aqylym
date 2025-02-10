@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:aqylym/src/core/api/client/rest/dio/dio_client.dart';
 import 'package:aqylym/src/core/env/environment_config.dart';
 import 'package:aqylym/src/core/exceptions/domain_exception.dart';
@@ -22,6 +24,7 @@ class BookRemoteImpl implements IBookRemote {
   @override
   Future<Either<DomainException, GetTextEntity>> getText(GetTextRequest request) async {
     try {
+      log(EnvironmentConfig.OPENAI_API_KEY);
       final response = await client.post(
         'https://api.openai.com/v1/chat/completions',
         data: request.toJson(),

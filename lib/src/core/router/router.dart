@@ -1,3 +1,5 @@
+import 'package:aqylym/main_prod.dart';
+import 'package:aqylym/src/core/services/auth/auth_service.dart';
 import 'package:aqylym/src/features/books/presentation/books_detail_page.dart';
 import 'package:aqylym/src/features/books/presentation/books_page.dart';
 import 'package:aqylym/src/features/bottom_navigation/bottom_navigation_page.dart';
@@ -22,10 +24,11 @@ part 'router_paths.dart';
 
 GoRouter routerProvider() {
   final StorageServiceImpl st = StorageServiceImpl();
+  final authNotifier = AuthNotifier(storageService);
 
   return GoRouter(
     refreshListenable: st,
-    initialLocation: RoutePaths.onboarding,
+    initialLocation: authNotifier.isAuthenticated ? RoutePaths.main : RoutePaths.onboarding,
     debugLogDiagnostics: true,
     routes: _routes,
   );

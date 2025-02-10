@@ -51,13 +51,10 @@ class BaseBlocWidget<B extends BaseBloc<E, S>, E, S> extends StatelessWidget {
       ],
       child: BlocListener<ContextActivityBloc, ContextActivityState>(
         listener: (BuildContext context, ContextActivityState state) =>
-            state.contextActivityHandler != null
-                ? state.contextActivityHandler!(context)
-                : null,
+            state.contextActivityHandler != null ? state.contextActivityHandler!(context) : null,
         child: BlocConsumer<B, S>(
           listener: listener ?? (BuildContext context, s) {},
-          builder: (BuildContext context, s) =>
-              builder(context, s, context.read<B>()),
+          builder: (BuildContext context, s) => builder(context, s, context.read<B>()),
           buildWhen: buildWhen,
           listenWhen: listenWhen,
         ),

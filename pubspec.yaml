@@ -53,6 +53,7 @@ dependencies:
   flutter_native_splash: ^2.2.15
   flutter_neat_and_clean_calendar: ^0.4.1
   flutter_riverpod: ^2.1.1
+  flutter_scroll_shadow: ^1.2.6
   flutter_sound: ^9.16.3
   flutter_spinkit: ^5.1.0
   flutter_svg: ^2.0.5

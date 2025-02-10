@@ -22,10 +22,6 @@ GetTextRequest _$GetTextRequestFromJson(Map<String, dynamic> json) {
 mixin _$GetTextRequest {
   String get model => throw _privateConstructorUsedError;
   List<Map<String, String>> get messages => throw _privateConstructorUsedError;
-  @JsonKey(name: 'max_tokens')
-  int get maxTokens => throw _privateConstructorUsedError;
-  double get temperature => throw _privateConstructorUsedError;
-  String? get stop => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,12 +35,7 @@ abstract class $GetTextRequestCopyWith<$Res> {
           GetTextRequest value, $Res Function(GetTextRequest) then) =
       _$GetTextRequestCopyWithImpl<$Res, GetTextRequest>;
   @useResult
-  $Res call(
-      {String model,
-      List<Map<String, String>> messages,
-      @JsonKey(name: 'max_tokens') int maxTokens,
-      double temperature,
-      String? stop});
+  $Res call({String model, List<Map<String, String>> messages});
 }
 
 /// @nodoc
@@ -62,9 +53,6 @@ class _$GetTextRequestCopyWithImpl<$Res, $Val extends GetTextRequest>
   $Res call({
     Object? model = null,
     Object? messages = null,
-    Object? maxTokens = null,
-    Object? temperature = null,
-    Object? stop = freezed,
   }) {
     return _then(_value.copyWith(
       model: null == model
@@ -75,18 +63,6 @@ class _$GetTextRequestCopyWithImpl<$Res, $Val extends GetTextRequest>
           ? _value.messages
           : messages // ignore: cast_nullable_to_non_nullable
               as List<Map<String, String>>,
-      maxTokens: null == maxTokens
-          ? _value.maxTokens
-          : maxTokens // ignore: cast_nullable_to_non_nullable
-              as int,
-      temperature: null == temperature
-          ? _value.temperature
-          : temperature // ignore: cast_nullable_to_non_nullable
-              as double,
-      stop: freezed == stop
-          ? _value.stop
-          : stop // ignore: cast_nullable_to_non_nullable
-              as String?,
     ) as $Val);
   }
 }
@@ -99,12 +75,7 @@ abstract class _$$GetTextRequestImplCopyWith<$Res>
       __$$GetTextRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String model,
-      List<Map<String, String>> messages,
-      @JsonKey(name: 'max_tokens') int maxTokens,
-      double temperature,
-      String? stop});
+  $Res call({String model, List<Map<String, String>> messages});
 }
 
 /// @nodoc
@@ -120,9 +91,6 @@ class __$$GetTextRequestImplCopyWithImpl<$Res>
   $Res call({
     Object? model = null,
     Object? messages = null,
-    Object? maxTokens = null,
-    Object? temperature = null,
-    Object? stop = freezed,
   }) {
     return _then(_$GetTextRequestImpl(
       model: null == model
@@ -133,18 +101,6 @@ class __$$GetTextRequestImplCopyWithImpl<$Res>
           ? _value._messages
           : messages // ignore: cast_nullable_to_non_nullable
               as List<Map<String, String>>,
-      maxTokens: null == maxTokens
-          ? _value.maxTokens
-          : maxTokens // ignore: cast_nullable_to_non_nullable
-              as int,
-      temperature: null == temperature
-          ? _value.temperature
-          : temperature // ignore: cast_nullable_to_non_nullable
-              as double,
-      stop: freezed == stop
-          ? _value.stop
-          : stop // ignore: cast_nullable_to_non_nullable
-              as String?,
     ));
   }
 }
@@ -154,10 +110,7 @@ class __$$GetTextRequestImplCopyWithImpl<$Res>
 class _$GetTextRequestImpl implements _GetTextRequest {
   const _$GetTextRequestImpl(
       {this.model = 'gpt-3.5-turbo',
-      required final List<Map<String, String>> messages,
-      @JsonKey(name: 'max_tokens') this.maxTokens = 150,
-      this.temperature = 0.7,
-      this.stop = null})
+      required final List<Map<String, String>> messages})
       : _messages = messages;
 
   factory _$GetTextRequestImpl.fromJson(Map<String, dynamic> json) =>
@@ -175,18 +128,8 @@ class _$GetTextRequestImpl implements _GetTextRequest {
   }
 
   @override
-  @JsonKey(name: 'max_tokens')
-  final int maxTokens;
-  @override
-  @JsonKey()
-  final double temperature;
-  @override
-  @JsonKey()
-  final String? stop;
-
-  @override
   String toString() {
-    return 'GetTextRequest(model: $model, messages: $messages, maxTokens: $maxTokens, temperature: $temperature, stop: $stop)';
+    return 'GetTextRequest(model: $model, messages: $messages)';
   }
 
   @override
@@ -195,23 +138,13 @@ class _$GetTextRequestImpl implements _GetTextRequest {
         (other.runtimeType == runtimeType &&
             other is _$GetTextRequestImpl &&
             (identical(other.model, model) || other.model == model) &&
-            const DeepCollectionEquality().equals(other._messages, _messages) &&
-            (identical(other.maxTokens, maxTokens) ||
-                other.maxTokens == maxTokens) &&
-            (identical(other.temperature, temperature) ||
-                other.temperature == temperature) &&
-            (identical(other.stop, stop) || other.stop == stop));
+            const DeepCollectionEquality().equals(other._messages, _messages));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      model,
-      const DeepCollectionEquality().hash(_messages),
-      maxTokens,
-      temperature,
-      stop);
+      runtimeType, model, const DeepCollectionEquality().hash(_messages));
 
   @JsonKey(ignore: true)
   @override
@@ -230,11 +163,9 @@ class _$GetTextRequestImpl implements _GetTextRequest {
 
 abstract class _GetTextRequest implements GetTextRequest {
   const factory _GetTextRequest(
-      {final String model,
-      required final List<Map<String, String>> messages,
-      @JsonKey(name: 'max_tokens') final int maxTokens,
-      final double temperature,
-      final String? stop}) = _$GetTextRequestImpl;
+          {final String model,
+          required final List<Map<String, String>> messages}) =
+      _$GetTextRequestImpl;
 
   factory _GetTextRequest.fromJson(Map<String, dynamic> json) =
       _$GetTextRequestImpl.fromJson;
@@ -243,13 +174,6 @@ abstract class _GetTextRequest implements GetTextRequest {
   String get model;
   @override
   List<Map<String, String>> get messages;
-  @override
-  @JsonKey(name: 'max_tokens')
-  int get maxTokens;
-  @override
-  double get temperature;
-  @override
-  String? get stop;
   @override
   @JsonKey(ignore: true)
   _$$GetTextRequestImplCopyWith<_$GetTextRequestImpl> get copyWith =>

@@ -716,6 +716,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_scroll_shadow",
+      "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/flutter_scroll_shadow-1.2.6",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "flutter_sound",
       "rootUri": "file:///Users/yerassyltynymbay/.pub-cache/hosted/pub.dev/flutter_sound-9.19.1",
       "packageUri": "lib/",
@@ -1952,7 +1958,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2025-02-06T11:04:45.969812Z",
+  "generated": "2025-02-10T10:11:47.087871Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///Users/yerassyltynymbay/Development/flutter",
