@@ -10,7 +10,7 @@ _$GetTextRequestImpl _$$GetTextRequestImplFromJson(Map<String, dynamic> json) =>
     _$GetTextRequestImpl(
       model: json['model'] as String? ?? 'gpt-3.5-turbo',
       messages: (json['messages'] as List<dynamic>)
-          .map((e) => Map<String, String>.from(e as Map))
+          .map((e) => e as Map<String, dynamic>)
           .toList(),
     );
 

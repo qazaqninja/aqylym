@@ -9,7 +9,7 @@ part 'get_text_request.g.dart';
 class GetTextRequest extends BaseRequest with _$GetTextRequest {
   const factory GetTextRequest({
     @Default('gpt-3.5-turbo') String model,
-    required List<Map<String, String>> messages,
+    required List<Map<String, dynamic>> messages,
   }) = _GetTextRequest;
 
   factory GetTextRequest.fromJson(Map<String, dynamic> json) => _$GetTextRequestFromJson(json);

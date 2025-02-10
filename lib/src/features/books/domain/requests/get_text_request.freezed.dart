@@ -21,7 +21,7 @@ GetTextRequest _$GetTextRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$GetTextRequest {
   String get model => throw _privateConstructorUsedError;
-  List<Map<String, String>> get messages => throw _privateConstructorUsedError;
+  List<Map<String, dynamic>> get messages => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +35,7 @@ abstract class $GetTextRequestCopyWith<$Res> {
           GetTextRequest value, $Res Function(GetTextRequest) then) =
       _$GetTextRequestCopyWithImpl<$Res, GetTextRequest>;
   @useResult
-  $Res call({String model, List<Map<String, String>> messages});
+  $Res call({String model, List<Map<String, dynamic>> messages});
 }
 
 /// @nodoc
@@ -62,7 +62,7 @@ class _$GetTextRequestCopyWithImpl<$Res, $Val extends GetTextRequest>
       messages: null == messages
           ? _value.messages
           : messages // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, String>>,
+              as List<Map<String, dynamic>>,
     ) as $Val);
   }
 }
@@ -75,7 +75,7 @@ abstract class _$$GetTextRequestImplCopyWith<$Res>
       __$$GetTextRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String model, List<Map<String, String>> messages});
+  $Res call({String model, List<Map<String, dynamic>> messages});
 }
 
 /// @nodoc
@@ -100,7 +100,7 @@ class __$$GetTextRequestImplCopyWithImpl<$Res>
       messages: null == messages
           ? _value._messages
           : messages // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, String>>,
+              as List<Map<String, dynamic>>,
     ));
   }
 }
@@ -110,7 +110,7 @@ class __$$GetTextRequestImplCopyWithImpl<$Res>
 class _$GetTextRequestImpl implements _GetTextRequest {
   const _$GetTextRequestImpl(
       {this.model = 'gpt-3.5-turbo',
-      required final List<Map<String, String>> messages})
+      required final List<Map<String, dynamic>> messages})
       : _messages = messages;
 
   factory _$GetTextRequestImpl.fromJson(Map<String, dynamic> json) =>
@@ -119,9 +119,9 @@ class _$GetTextRequestImpl implements _GetTextRequest {
   @override
   @JsonKey()
   final String model;
-  final List<Map<String, String>> _messages;
+  final List<Map<String, dynamic>> _messages;
   @override
-  List<Map<String, String>> get messages {
+  List<Map<String, dynamic>> get messages {
     if (_messages is EqualUnmodifiableListView) return _messages;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_messages);
@@ -164,7 +164,7 @@ class _$GetTextRequestImpl implements _GetTextRequest {
 abstract class _GetTextRequest implements GetTextRequest {
   const factory _GetTextRequest(
           {final String model,
-          required final List<Map<String, String>> messages}) =
+          required final List<Map<String, dynamic>> messages}) =
       _$GetTextRequestImpl;
 
   factory _GetTextRequest.fromJson(Map<String, dynamic> json) =
@@ -173,7 +173,7 @@ abstract class _GetTextRequest implements GetTextRequest {
   @override
   String get model;
   @override
-  List<Map<String, String>> get messages;
+  List<Map<String, dynamic>> get messages;
   @override
   @JsonKey(ignore: true)
   _$$GetTextRequestImplCopyWith<_$GetTextRequestImpl> get copyWith =>
