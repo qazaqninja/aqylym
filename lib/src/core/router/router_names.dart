@@ -14,4 +14,5 @@ class RouteNames {
   static const String onboarding = 'onboarding';
   static const String bottomNavigation = 'bottomNavigation';
   static const String bookDetail = 'books-detail';
+  static const String bookRead = 'book-read';
 }

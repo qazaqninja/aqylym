@@ -23,4 +23,5 @@ class AppColors {
   static const inactiveSliderColor = Color(0xffACB8CF);
   static const puzzleColor = Color(0xff7E007E);
   static const progressBack = Color(0xffC4C4C4);
+  static const bookContainerColor = Color(0xff9FD3D5);
 }
