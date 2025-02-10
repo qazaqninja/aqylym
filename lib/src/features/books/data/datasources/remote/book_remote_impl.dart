@@ -17,14 +17,6 @@ class BookRemoteImpl implements IBookRemote {
   BookRemoteImpl(this.client);
 
   final DioRestClient client;
-  // final _headers = {
-  //   'Content-Type': 'application/json',
-  //   'Authorization':
-  //       'Bearer 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',
-  //   'Cookie':
-  //       '__cf_bm=R_33dT2nMAU2cZbv8M6n9UfkXPuQA3UaoSVdKGDSxAc-1739184032-1.0.1.1-ZC7_Pi30nvBpzizIpSlKKtaLRE2TK8Mn.zT1z4yACkb6_XzDbCVB.miHpsfboLefXJnn4kW8wGhVzbq_LumvNQ; _cfuvid=GLbJWdVKXbYyXL7ivpEyNz4wSxar00FPyAutI2fxx1I-1739184032459-0.0.1.1-604800000'
-  // };
-
   @override
   Future<Either<DomainException, GetTextEntity>> getText(GetTextRequest request) async {
     var headers = {
