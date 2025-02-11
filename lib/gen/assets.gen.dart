@@ -9,16 +9,6 @@
 
 import 'package:flutter/widgets.dart';
 
-class $LibGen {
-  const $LibGen();
-
-  /// File path: lib/.env
-  String get aEnv => 'lib/.env';
-
-  /// List of all assets
-  List<String> get values => [aEnv];
-}
-
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
@@ -109,7 +99,6 @@ class Assets {
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsSplashGen splash = $AssetsSplashGen();
-  static const $LibGen lib = $LibGen();
 }
 
 class AssetGenImage {

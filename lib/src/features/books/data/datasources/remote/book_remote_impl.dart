@@ -9,8 +9,6 @@ import 'package:dio/dio.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
 
-import '../../../../../core/env/environment_config.dart';
-
 @named
 @LazySingleton(as: IBookRemote)
 class BookRemoteImpl implements IBookRemote {
@@ -29,11 +27,12 @@ class BookRemoteImpl implements IBookRemote {
   Future<Either<DomainException, GetTextEntity>> getText(GetTextRequest request) async {
     var headers = {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer ${EnvironmentConfig.OPENAI_API_KEY}',
+      'Authorization':
+          'Bearer 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',
     };
 
     var dio = Dio();
-    var response = await dio.request(
+    var response = await dio.post(
       'https://api.openai.com/v1/chat/completions',
       options: Options(
         method: 'POST',

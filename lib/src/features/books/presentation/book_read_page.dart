@@ -224,7 +224,9 @@ class _BookReadPageState extends State<BookReadPage> {
                                       color: AppColors.blackFont,
                                     ),
                                     onPressed: currentPage > 0
-                                        ? () => context.read<BookBloc>().add(const BookEvent.previousPage())
+                                        ? () => context
+                                            .read<BookBloc>()
+                                            .add(const BookEvent.previousPage())
                                         : null,
                                   ),
                                   Text(
@@ -243,7 +245,8 @@ class _BookReadPageState extends State<BookReadPage> {
                                       color: AppColors.blackFont,
                                     ),
                                     onPressed: currentPage < totalPages - 1
-                                        ? () => context.read<BookBloc>().add(const BookEvent.nextPage())
+                                        ? () =>
+                                            context.read<BookBloc>().add(const BookEvent.nextPage())
                                         : null,
                                   ),
                                 ],

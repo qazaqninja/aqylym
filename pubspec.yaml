@@ -14,7 +14,6 @@ dependency_overrides:
 
 dependencies:
   animations: ^2.0.7
-  ar_flutter_plugin_flutterflow: ^0.7.55
   audio_session: ^0.1.21
   audioplayers: ^6.1.0
   auto_scroll: ^0.2.0
@@ -54,7 +53,6 @@ dependencies:
   flutter_neat_and_clean_calendar: ^0.4.1
   flutter_riverpod: ^2.1.1
   flutter_scroll_shadow: ^1.2.6
-  flutter_sound: ^9.16.3
   flutter_spinkit: ^5.1.0
   flutter_svg: ^2.0.5
   flutter_switch: ^0.3.2
@@ -162,7 +160,7 @@ flutter:
     - assets/images/star.svg
     - assets/images/book1.svg
     - assets/images/book2.svg
-    - lib/.env
+    # - lib/.env
 
   fonts:
     - family: app_icons
@@ -228,7 +226,7 @@ flavorizr:
     android:
       flavorDimensions: "flavor-type"
       customConfig:
-        minSdkVersion: 23
+        minSdkVersion: 24
     ios:
       buildSettings: {}
   flavors:

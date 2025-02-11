@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:545677694943:android:4451edc5e84291a614966a",
+        "mobilesdk_app_id": "1:545677694943:android:89f31f8337cfdaa314966a",
         "android_client_info": {
-          "package_name": "kz.cleverest.app_template"
+          "package_name": "kz.aqylym.app"
         }
       },
       "oauth_client": [],
