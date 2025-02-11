@@ -1,4 +1,5 @@
 import 'package:aqylym/src/app/imports.dart';
+import 'package:aqylym/src/core/router/router.dart';
 import 'package:aqylym/src/core/theme/app_icons.dart';
 import 'package:aqylym/src/core/theme/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -342,7 +343,9 @@ class _ActionButtons extends StatelessWidget {
         children: [
           Expanded(
             child: _ActionButton(
-              onPressed: () {},
+              onPressed: () {
+                context.push(RoutePaths.bookRead);
+              },
               label: 'Читать',
               backgroundColor: const Color(0xFF2F7C78),
               textColor: Colors.white,
