@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:aqylym/src/core/api/client/rest/dio/dio_client.dart';
+import 'package:aqylym/src/core/env/environment_config.dart';
 import 'package:aqylym/src/core/exceptions/domain_exception.dart';
 import 'package:aqylym/src/features/books/data/datasources/remote/i_book_remote.dart';
 import 'package:aqylym/src/features/books/domain/entities/get_text_entity.dart';
@@ -27,12 +28,11 @@ class BookRemoteImpl implements IBookRemote {
   Future<Either<DomainException, GetTextEntity>> getText(GetTextRequest request) async {
     var headers = {
       'Content-Type': 'application/json',
-      'Authorization':
-          'Bearer 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',
+      'Authorization': 'Bearer ${EnvironmentConfig.OPENAI_API_KEY}',
     };
 
     var dio = Dio();
-    var response = await dio.post(
+    var response = await dio.request(
       'https://api.openai.com/v1/chat/completions',
       options: Options(
         method: 'POST',

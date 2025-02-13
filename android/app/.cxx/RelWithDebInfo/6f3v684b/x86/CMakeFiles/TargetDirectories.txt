@@ -1,0 +1,2 @@
+/Users/qazaqninja/Developer/aqylym/android/app/.cxx/RelWithDebInfo/6f3v684b/x86/CMakeFiles/edit_cache.dir
+/Users/qazaqninja/Developer/aqylym/android/app/.cxx/RelWithDebInfo/6f3v684b/x86/CMakeFiles/rebuild_cache.dir

@@ -7,7 +7,6 @@ import 'src/core/services/injectable/injectable_service.dart';
 
 final StorageServiceImpl storageService = StorageServiceImpl();
 void main() async {
-  // await dotenv.load(fileName: 'lib/.env');
   try {
     // Ensure Flutter is initialized
     // WidgetsFlutterBinding.ensureInitialized();
