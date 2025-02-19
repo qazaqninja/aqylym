@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:aqylym/src/core/services/storage/storage_service_impl.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -36,8 +38,8 @@ void main() async {
       },
     );
   } catch (e, stackTrace) {
-    print('Initialization error: $e');
-    print('Stack trace: $stackTrace');
+    log('Initialization error: $e');
+    log('Stack trace: $stackTrace');
     rethrow;
   }
 }

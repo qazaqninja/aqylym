@@ -1,4 +1,5 @@
 import 'package:aqylym/src/app/imports.dart';
+import 'package:aqylym/src/core/router/router.dart';
 import 'package:aqylym/src/core/theme/app_icons.dart';
 import 'package:aqylym/src/core/theme/colors.dart';
 import 'package:aqylym/src/core/theme/theme.dart';
@@ -47,7 +48,9 @@ class GamesPage extends StatelessWidget {
                       ability: 'логика',
                       description: 'Установите закономерность верхних карточек, выбрав один из варианто нижнего ряда.',
                       ageRange: '4-6 лет',
-                      onPlay: () {},
+                      onPlay: () {
+                        context.push(RoutePaths.logicGame);
+                      },
                     ),
                     const SizedBox(height: 16),
                     GameCard(

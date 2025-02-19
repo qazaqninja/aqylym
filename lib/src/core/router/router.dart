@@ -1,10 +1,11 @@
-import 'package:aqylym/main.dart';
+import 'package:aqylym/main_prod.dart';
 import 'package:aqylym/src/core/services/auth/auth_service.dart';
 import 'package:aqylym/src/features/books/presentation/book_read_page.dart';
 import 'package:aqylym/src/features/books/presentation/books_detail_page.dart';
 import 'package:aqylym/src/features/books/presentation/books_page.dart';
 import 'package:aqylym/src/features/bottom_navigation/bottom_navigation_page.dart';
 import 'package:aqylym/src/features/games/games_page.dart';
+import 'package:aqylym/src/features/games/logic_game_page.dart';
 import 'package:aqylym/src/features/help/help_page.dart';
 import 'package:aqylym/src/features/login/presentation/login_page.dart';
 import 'package:aqylym/src/features/main/main_page.dart';

@@ -15,4 +15,5 @@ class RouteNames {
   static const String bottomNavigation = 'bottomNavigation';
   static const String bookDetail = 'books-detail';
   static const String bookRead = 'book-read';
+  static const String logicGame = 'logic-game';
 }

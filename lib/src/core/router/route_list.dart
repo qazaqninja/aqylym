@@ -122,6 +122,13 @@ List<RouteBase> _routes = [
     ),
   ),
   GoRoute(
+    path: RoutePaths.logicGame,
+    pageBuilder: (context, state) => getPage(
+      child: const LogicGamePage(),
+      state: state,
+    ),
+  ),
+  GoRoute(
     name: RouteNames.login,
     path: RoutePaths.login,
     builder: (context, GoRouterState state) {

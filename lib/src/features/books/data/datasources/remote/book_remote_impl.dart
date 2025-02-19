@@ -24,49 +24,27 @@ class BookRemoteImpl implements IBookRemote {
       'Authorization': 'Bearer ${EnvironmentConfig.OPENAI_API_KEY}',
     };
 
-    var dio = Dio();
-    var response = await dio.request(
+    var response = await client.post(
       'https://api.openai.com/v1/chat/completions',
+      data: request.toJson(),
       options: Options(
         method: 'POST',
         headers: headers,
       ),
-      data: request.toJson(),
     );
 
-    if (response.statusCode == 200) {
-      print(json.encode(response.data));
-      return Right(GetTextEntity.fromJson(response.data));
-    } else {
-      print(response.statusMessage);
-      return Left(UnknownException(message: 'Request failed'));
-    }
-
-    //   try {
-    //     log(EnvironmentConfig.OPENAI_API_KEY);
-    //     final response = await client.post(
-    //       'https://api.openai.com/v1/chat/completions',
-    //       data: json.encode(request.toJson()),
-    //       options: Options(headers: _headers, method: 'POST'),
-    //     );
-
-    //     return response.fold(
-    //       (error) => Left(error),
-    //       (result) {
-    //         if (result.statusCode == 200) {
-    //           try {
-    //             return Right(GetTextEntity.fromJson(result.data));
-    //           } catch (e) {
-    //             return Left(UnknownException(message: 'Failed to parse response: $e'));
-    //           }
-    //         } else {
-    //           return Left(UnknownException(message: result.statusMessage ?? 'Unknown error'));
-    //         }
-    //       },
-    //     );
-    //   } catch (e) {
-    //     return Left(UnknownException(message: 'Request failed: $e'));
-    //   }
-    // }
+    return response.fold(
+      (error) => Left(error),
+      (result) {
+        if (result.statusCode == 200) {
+          print(jsonEncode(request.toJson()));
+          print(json.encode(result.data));
+          return Right(GetTextEntity.fromJson(result.data));
+        } else {
+          print(result.statusMessage);
+          return Left(UnknownException(message: 'Request failed'));
+        }
+      },
+    );
   }
 }

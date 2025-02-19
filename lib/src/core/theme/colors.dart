@@ -24,4 +24,5 @@ class AppColors {
   static const puzzleColor = Color(0xff7E007E);
   static const progressBack = Color(0xffC4C4C4);
   static const bookContainerColor = Color(0xff9FD3D5);
+  static const appBarTitleColor = Color(0xff8F8F8F);
 }
